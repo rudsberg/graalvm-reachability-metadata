@@ -1,0 +1,1 @@
+from .proguard_mapper import generate_proguard_config_str
