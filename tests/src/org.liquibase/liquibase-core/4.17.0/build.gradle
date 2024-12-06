@@ -49,9 +49,56 @@ task processAgentOutput {
                 println "ProGuard config generated at: ${proguardConfigOutput.absolutePath}"
                 println "ProGuard config content:"
                 println proguardConfigOutput.text
-                
-                // TODO: Run ProGuard with the generated config
+
+                def nativeTestCompileTask = tasks.named("nativeTestCompile").get()
+                def nativeClasspath = project.files(
+                    // Base test classpath (filter out main classes)
+                    tasks.named("test").get().classpath.filter { 
+                        !(it.absolutePath.contains("build/classes/java/main") || it.absolutePath.contains("build/resources/main") || it.absolutePath.contains("junit"))
+                    },
+                    // Additional native-image specific paths
+                    "${buildDir}/classes/java/test",
+                    "${buildDir}/resources/test",  
+                    "${buildDir}/test-results/test/testlist",
+                    "${buildDir}/libs/org.liquibase.liquibase-core_tests.jar",
+                )
+                println "Native classpath entries:"
+                nativeClasspath.each { path ->
+                    println "${path.absolutePath}"
+                }
+
+                // Execute ProGuard
                 println "Executing ProGuard..."
+                def proguardScript = "/Users/joelrudsberg/Software/proguard-7.6.0/bin/proguard.sh"
+                def obfuscatedJar = file("${buildDir}/obfuscated.jar")
+                
+                def proguardResult = exec {
+                    executable proguardScript
+                    args "-dontwarn", 
+                        "-dontnote",
+                        "-keepdirectories",
+                        "-dontusemixedcaseclassnames",
+                        "@${proguardConfigOutput.absolutePath}",
+                        "-injars", "${nativeClasspath.asPath}",
+                        "-outjars", "${obfuscatedJar.absolutePath}(!module-info.class,!META-INF/**,!META-INF/MANIFEST.MF)"
+                    ignoreExitValue = true
+                }
+                
+                if (proguardResult.exitValue == 0) {
+                    println "ProGuard execution successful, obfuscated jar saved to ${obfuscatedJar}"
+                    // println "Pointing nativeTestCompile classpath to obfuscated classpath"
+                    
+                    // // Update the native-image classpath to use the obfuscated jar
+                    // tasks.named("nativeTestCompile") {
+                    //     doFirst {
+                    //         // Replace original jar with obfuscated one in classpath
+                    //         classpath = project.files(obfuscatedJar)
+                    //     }
+                    // }
+                } else {
+                    println "ERROR: ProGuard execution failed!"
+                }
+
             } else {
                 println "ERROR: ProGuard mapper script failed!"
             }
