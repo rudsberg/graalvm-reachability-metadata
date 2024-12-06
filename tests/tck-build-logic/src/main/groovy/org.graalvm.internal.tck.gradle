@@ -68,6 +68,8 @@ tasks.named('test') {
     }
 }
 
+def obfuscatedClasspathProvider = project.objects.property(FileCollection)
+
 graalvmNative {
     metadataRepository {
         enabled = true
@@ -79,8 +81,14 @@ graalvmNative {
                 excludeConfig.put(libraryGAV, [".*"])
             }
             buildArgs.add('-H:+StrictConfiguration') // Necessary in order to test metadata properly
+            buildArgs.add('-cp')
+            buildArgs.add(providers.provider { obfuscatedClasspathProvider.getOrNull()?.asPath ?: "FAILED" })
             verbose = true
             quickBuild = true
         }
     }
+}
+
+project.ext.setObfuscatedClasspath = { FileCollection files ->
+    obfuscatedClasspathProvider.set(files)
 }

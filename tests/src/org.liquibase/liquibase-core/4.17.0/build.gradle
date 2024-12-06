@@ -116,15 +116,8 @@ task processAgentOutput {
                 if (proguardResult.exitValue == 0) {
                     println "ProGuard execution successful. Saved to ${obfuscatedDir}"
 
-                    // println "Pointing nativeTestCompile classpath to obfuscated classpath"
-                    
-                    // // Update the native-image classpath to use the obfuscated jar
-                    // tasks.named("nativeTestCompile") {
-                    //     doFirst {
-                    //         // Replace original jar with obfuscated one in classpath
-                    //         classpath = project.files(obfuscatedJar)
-                    //     }
-                    // }
+                    println "Communicating obfuscated paths to internal.tck"
+                    project.setObfuscatedClasspath(project.files(obfuscatedDir.listFiles()))
                 } else {
                     println "ERROR: ProGuard execution failed!"
                 }

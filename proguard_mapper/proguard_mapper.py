@@ -8,7 +8,7 @@ def generate_proguard_config_str(json_metadata):
         "-dontnote",
         "-keepdirectories", # for now
         "-dontusemixedcaseclassnames", # for now 
-        "-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses",
+        "-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses", # for now 
         "-keepparameternames",
         "-dontoptimize",
         "-dontpreverify", 
