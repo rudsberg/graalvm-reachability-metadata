@@ -1,0 +1,131 @@
+> Task :nativeTestCompile
+[native-image-plugin] Args are: [-cp, /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/libs/org.liquibase.liquibase-core_tests.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.graalvm.buildtools/junit-platform-native/0.9.28/8080b84eee8ed37d8a937d8a0f22184071b7867a/junit-platform-native-0.9.28.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.0/8fea1d9c58b2156f1b998f2f18da04bc9e087f74/junit-jupiter-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.10.0/af4e0a3cb6901aa53d6401003fc10638014b39b1/junit-vintage-engine-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-console/1.10.0/9901db09e60bf678e4a22fd4be564f10aa7c585/junit-platform-console-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-reporting/1.10.0/d0bf1dc2f224e41439c65af66cd75dc13dec670e/junit-platform-reporting-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.0/89a1922534ed102be1fb2a8c0b2c6151297a12bf/junit-platform-launcher-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.0/9041c7365495a897a64782ea5a6fdb99dab1814e/junit-jupiter-params-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.0/90587932d718fc51a48112d33045a18476c542ad/junit-jupiter-engine-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.0/2fe4ba3d31d5067878e468c96aa039005a9134d3/junit-jupiter-api-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.0/276c4edcf64fabb5a139fa7b4f99330d7a93b804/junit-platform-engine-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.0/d533ff2c286eaf963566f92baf5f8a06628d2609/junit-platform-commons-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/4.17.0/f5f33de5182c7319fb271f6b409fbcaafc93a7d7/liquibase-core-4.17.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/com.h2database/h2/2.1.210/a7395ae43062f9237eb441137b789c518c7d4c2f/h2-2.1.210.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.22.0/c300c0c6a24559f35fa0bd3a5472dc1edcd0111e/assertj-core-3.22.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.32/e80612549feb5c9191c498de628c1aa80693cf0b/snakeyaml-1.32.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/5.6/6bbebb3c8c62f278ce2e62ea819694a8a4e3219c/opencsv-5.6.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.9/ba6ac8c2807490944a0a27f6f8e68fb5ed2e80e2/commons-text-1.9.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/classes/java/test:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/test-results/test/testlist, --no-fallback, --verbose, -Ob, -o, /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/native/nativeTestCompile/org.liquibase.liquibase-core_tests-tests, -H:ConfigurationFileDirectories=/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/native/generated/generateTestResourcesConfigFile,/Users/joelrudsberg/dev/graalvm-reachability-metadata/metadata/org.liquibase/liquibase-core/4.17.0,/Users/joelrudsberg/dev/graalvm-reachability-metadata/metadata/com.h2database/h2/2.1.210, --features=org.graalvm.junit.platform.JUnitPlatformFeature, -H:+StrictConfiguration, --enable-url-protocols=http, org.graalvm.junit.platform.NativeImageJUnitLauncher]
+[native-image-plugin] GraalVM Toolchain detection is disabled
+[native-image-plugin] GraalVM location read from environment variable: GRAALVM_HOME
+[native-image-plugin] Native Image executable path: /Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/bin/native-image
+Apply file:///Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test/META-INF/native-image/test/reflect-config.json
+Apply file:///Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test/META-INF/native-image/test/resource-config.json
+Warning: The option '-H:+StrictConfiguration' is experimental and must be enabled via '-H:+UnlockExperimentalVMOptions' in the future.
+Warning: Please re-evaluate whether any experimental option is required, and either remove or unlock it. The build output lists all active experimental options, including where they come from and possible alternatives. If you think an experimental option should be considered as stable, please file an issue.
+Apply jar:file:///Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/library-support.jar!/META-INF/native-image/com.oracle.svm/thirdparty/native-image.properties
+Apply jar:file:///Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/library-support.jar!/META-INF/native-image/com.oracle.svm/polyglot/native-image.properties
+Executing [
+HOME=/Users/joelrudsberg \
+LANG=en_US.UTF-8 \
+'PATH=/Users/joelrudsberg/.pyenv/shims:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/joelrudsberg/Software/sbom-utility-v0.16.0-darwin-arm64:/Users/joelrudsberg/.local/bin:/Users/joelrudsberg/Software/apache-maven-3.5.3/bin:/Users/joelrudsberg/.mx/jdks/labsjdk-ee-latest/Contents/Home/bin:/Users/joelrudsberg/dev/mx:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Users/joelrudsberg/Library/Application Support/JetBrains/Toolbox/scripts:/Users/joelrudsberg/.local/bin' \
+PWD=/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0 \
+USE_NATIVE_IMAGE_JAVA_PLATFORM_MODULE_SYSTEM=true \
+/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/bin/java \
+-XX:+UseParallelGC \
+-XX:+UnlockExperimentalVMOptions \
+-XX:+EnableJVMCI \
+-Dtruffle.TrustAllTruffleRuntimeProviders=true \
+-Dtruffle.TruffleRuntime=com.oracle.truffle.api.impl.DefaultTruffleRuntime \
+-Dgraalvm.ForcePolyglotInvalid=true \
+-Dgraalvm.locatorDisabled=true \
+--add-exports=java.base/com.sun.crypto.provider=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.access=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.event=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.loader=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.logger=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.misc=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile,org.graalvm.nativeimage.pointsto \
+--add-exports=java.base/jdk.internal.module=org.graalvm.nativeimage.base,org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.org.objectweb.asm=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.perf=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.platform=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.ref=org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile \
+--add-exports=java.base/jdk.internal.reflect=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.util=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.vm.annotation=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal.vm=org.graalvm.nativeimage.builder \
+--add-exports=java.base/jdk.internal=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.invoke.util=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.net.www=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.net=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.nio.ch=org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile \
+--add-exports=java.base/sun.reflect.annotation=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.reflect.generics.factory=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.reflect.generics.reflectiveObjects=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.reflect.generics.repository=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.reflect.generics.scope=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.reflect.generics.tree=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.security.jca=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.security.provider=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.security.ssl=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.security.util=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.security.x509=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.text.spi=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util.calendar=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util.cldr=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util.locale.provider=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util.locale=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util.resources=org.graalvm.nativeimage.builder \
+--add-exports=java.base/sun.util=org.graalvm.nativeimage.builder \
+--add-exports=java.management/com.sun.jmx.mbeanserver=org.graalvm.nativeimage.builder \
+--add-exports=java.management/sun.management=org.graalvm.nativeimage.builder,org.graalvm.nativeimage.pointsto \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.aarch64=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.amd64=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code.site=jdk.graal.compiler,org.graalvm.nativeimage.builder \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code.stack=jdk.graal.compiler,org.graalvm.nativeimage.builder \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.code=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile,org.graalvm.nativeimage.pointsto,org.graalvm.truffle.compiler \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.common=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.pointsto \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot.aarch64=jdk.graal.compiler \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot.amd64=jdk.graal.compiler \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot.riscv64=jdk.graal.compiler \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.hotspot=jdk.graal.compiler,org.graalvm.nativeimage.builder \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.meta=jdk.graal.compiler,org.graalvm.nativeimage.base,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.objectfile,org.graalvm.nativeimage.pointsto,org.graalvm.truffle.compiler \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.riscv64=jdk.graal.compiler,org.graalvm.nativeimage.builder \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.runtime=jdk.graal.compiler,org.graalvm.nativeimage.builder,org.graalvm.nativeimage.pointsto \
+--add-exports=jdk.internal.vm.ci/jdk.vm.ci.services=jdk.graal.compiler,org.graalvm.nativeimage.builder \
+--add-exports=jdk.jfr/jdk.jfr.events=org.graalvm.nativeimage.builder \
+--add-exports=jdk.jfr/jdk.jfr.internal.event=org.graalvm.nativeimage.builder \
+--add-exports=jdk.jfr/jdk.jfr.internal.jfc=org.graalvm.nativeimage.builder \
+--add-exports=jdk.jfr/jdk.jfr.internal=org.graalvm.nativeimage.builder \
+--add-exports=jdk.management/com.sun.management.internal=org.graalvm.nativeimage.builder \
+-XX:+UseJVMCINativeLibrary \
+-Xss10m \
+-XX:MaxRAMPercentage=46.566128730773926 \
+-XX:GCTimeRatio=9 \
+-XX:+ExitOnOutOfMemoryError \
+-Djava.awt.headless=true \
+'-Dorg.graalvm.vendor=GraalVM Community' \
+-Dorg.graalvm.vendorurl=https://www.graalvm.org/ \
+'-Dorg.graalvm.vendorversion=GraalVM CE 23+37.1' \
+-Dorg.graalvm.version=24.1.0 \
+-Dcom.oracle.graalvm.isaot=true \
+-Djava.system.class.loader=com.oracle.svm.hosted.NativeImageSystemClassLoader \
+-Xshare:off \
+-Djdk.reflect.useOldSerializableConstructor=true \
+-Djdk.internal.lambda.disableEagerInitialization=true \
+-Djdk.internal.lambda.eagerlyInitialize=false \
+-Djava.lang.invoke.InnerClassLambdaMetafactory.initializeLambdas=false \
+-Djava.lang.invoke.MethodHandle.DONT_INLINE_THRESHOLD=-1 \
+-Djava.lang.invoke.MethodHandle.PROFILE_GWT=false \
+-Djunit.platform.listeners.uid.tracking.output.dir=/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/test-results/test/testlist \
+--add-modules=ALL-DEFAULT \
+--module-path \
+/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/builder/svm.jar:/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/builder/native-image-base.jar:/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/builder/objectfile.jar:/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/builder/svm-foreign.jar:/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/builder/pointsto.jar \
+--module \
+org.graalvm.nativeimage.builder/com.oracle.svm.hosted.NativeImageGeneratorRunner \
+-keepalive \
+/var/folders/9c/cp9zv5hs6313c0hqgh6r7_mw0000gq/T/.native_image4657130952469551287alive \
+-imagecp \
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/libs/org.liquibase.liquibase-core_tests.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.graalvm.buildtools/junit-platform-native/0.9.28/8080b84eee8ed37d8a937d8a0f22184071b7867a/junit-platform-native-0.9.28.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.0/8fea1d9c58b2156f1b998f2f18da04bc9e087f74/junit-jupiter-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.10.0/af4e0a3cb6901aa53d6401003fc10638014b39b1/junit-vintage-engine-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-console/1.10.0/9901db09e60bf678e4a22fd4be564f10aa7c585/junit-platform-console-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-reporting/1.10.0/d0bf1dc2f224e41439c65af66cd75dc13dec670e/junit-platform-reporting-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.0/89a1922534ed102be1fb2a8c0b2c6151297a12bf/junit-platform-launcher-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.0/9041c7365495a897a64782ea5a6fdb99dab1814e/junit-jupiter-params-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.0/90587932d718fc51a48112d33045a18476c542ad/junit-jupiter-engine-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.0/2fe4ba3d31d5067878e468c96aa039005a9134d3/junit-jupiter-api-5.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.0/276c4edcf64fabb5a139fa7b4f99330d7a93b804/junit-platform-engine-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.0/d533ff2c286eaf963566f92baf5f8a06628d2609/junit-platform-commons-1.10.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.liquibase/liquibase-core/4.17.0/f5f33de5182c7319fb271f6b409fbcaafc93a7d7/liquibase-core-4.17.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/com.h2database/h2/2.1.210/a7395ae43062f9237eb441137b789c518c7d4c2f/h2-2.1.210.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.22.0/c300c0c6a24559f35fa0bd3a5472dc1edcd0111e/assertj-core-3.22.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/javax.xml.bind/jaxb-api/2.3.1/8531ad5ac454cc2deb9d4d32c40c4d7451939b5d/jaxb-api-2.3.1.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.yaml/snakeyaml/1.32/e80612549feb5c9191c498de628c1aa80693cf0b/snakeyaml-1.32.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/com.opencsv/opencsv/5.6/6bbebb3c8c62f278ce2e62ea819694a8a4e3219c/opencsv-5.6.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/javax.activation/javax.activation-api/1.2.0/85262acf3ca9816f9537ca47d5adeabaead7cb16/javax.activation-api-1.2.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-text/1.9/ba6ac8c2807490944a0a27f6f8e68fb5ed2e80e2/commons-text-1.9.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-lang3/3.12.0/c6842c86792ff03b9f1d1fe2aab8dc23aa6c6f0e/commons-lang3-3.12.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-collections4/4.4/62ebe7544cb7164d87e0637a2a6a2bdc981395e8/commons-collections4-4.4.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar:/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/classes/java/test:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test:/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/test-results/test/testlist \
+-imagemp \
+/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/library-support.jar \
+-H:CLibraryPath=/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/clibraries/darwin-aarch64,/Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/clibraries \
+-H:Path@driver=/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/native/nativeTestCompile \
+-H:ReflectionConfigurationResources@file:///Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test/META-INF/native-image/test/reflect-config.json+api=META-INF/native-image/test/reflect-config.json \
+-H:ResourceConfigurationResources@file:///Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/resources/test/META-INF/native-image/test/resource-config.json+api=META-INF/native-image/test/resource-config.json \
+-H:FallbackThreshold@user+api=0 \
+-H:Optimize@user+api=b \
+-H:Name@user+api=org.liquibase.liquibase-core_tests-tests \
+-H:ConfigurationFileDirectories@user=/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/org.liquibase/liquibase-core/4.17.0/build/native/generated/generateTestResourcesConfigFile,/Users/joelrudsberg/dev/graalvm-reachability-metadata/metadata/org.liquibase/liquibase-core/4.17.0,/Users/joelrudsberg/dev/graalvm-reachability-metadata/metadata/com.h2database/h2/2.1.210 \
+-H:Features@user+api=org.graalvm.junit.platform.JUnitPlatformFeature \
+-H:+StrictConfiguration@user \
+-H:EnableURLProtocols@user+api=http \
+'-H:Class@explicit main-class=org.graalvm.junit.platform.NativeImageJUnitLauncher' \
+-H:ImageBuildID@driver=235cdba8-f5eb-bb9a-ccac-ec4e6c5d38cd \
+'-H:Features@jar:file:///Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/library-support.jar!/META-INF/native-image/com.oracle.svm/thirdparty/native-image.properties+api=com.oracle.svm.thirdparty.gson.GsonFeature' \
+'-H:Features@jar:file:///Library/Java/JavaVirtualMachines/graalvm-community-openjdk-23+37.1/Contents/Home/lib/svm/library-support.jar!/META-INF/native-image/com.oracle.svm/polyglot/native-image.properties+api=com.oracle.svm.polyglot.groovy.GroovyIndyInterfaceFeature,com.oracle.svm.polyglot.scala.ScalaFeature'
+]

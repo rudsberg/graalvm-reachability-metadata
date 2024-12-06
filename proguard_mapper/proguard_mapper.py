@@ -4,16 +4,11 @@ def generate_proguard_config_str(json_metadata):
     # Required entries that are always present
     # For now we disable everything NOT REQUIRED for classnames
     config_entries = [
+        "-dontwarn",
+        "-dontnote",
+        "-keepdirectories", # for now
+        "-dontusemixedcaseclassnames", # for now 
         "-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses",
-        # Skip resource files and module-info
-        "-keep class !**.resources.** { *; }",
-        "-keep class !META-INF.** { *; }",
-        "-keep class !**.txt { *; }",
-        "-keep class !**.properties { *; }",
-        "-keep class !**.xml { *; }",
-        "-keep class !**.dtd { *; }",
-        "-keep class !**.xsd { *; }",
-        "-keep class !module-info { *; }",
         "-keepparameternames",
         "-dontoptimize",
         "-dontpreverify", 
