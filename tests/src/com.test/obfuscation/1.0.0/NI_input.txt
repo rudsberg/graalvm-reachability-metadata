@@ -1,0 +1,42 @@
+-imagecp \
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/libs/com.test.obfuscation_tests.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.graalvm.buildtools/junit-platform-native/0.9.28/8080b84eee8ed37d8a937d8a0f22184071b7867a/junit-platform-native-0.9.28.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter/5.10.0/8fea1d9c58b2156f1b998f2f18da04bc9e087f74/junit-jupiter-5.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.10.0/af4e0a3cb6901aa53d6401003fc10638014b39b1/junit-vintage-engine-5.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-console/1.10.0/9901db09e60bf678e4a22fd4be564f10aa7c585/junit-platform-console-1.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-reporting/1.10.0/d0bf1dc2f224e41439c65af66cd75dc13dec670e/junit-platform-reporting-1.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-launcher/1.10.0/89a1922534ed102be1fb2a8c0b2c6151297a12bf/junit-platform-launcher-1.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-params/5.10.0/9041c7365495a897a64782ea5a6fdb99dab1814e/junit-jupiter-params-5.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-engine/5.10.0/90587932d718fc51a48112d33045a18476c542ad/junit-jupiter-engine-5.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.jupiter/junit-jupiter-api/5.10.0/2fe4ba3d31d5067878e468c96aa039005a9134d3/junit-jupiter-api-5.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-engine/1.10.0/276c4edcf64fabb5a139fa7b4f99330d7a93b804/junit-platform-engine-1.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.platform/junit-platform-commons/1.10.0/d533ff2c286eaf963566f92baf5f8a06628d2609/junit-platform-commons-1.10.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.22.0/c300c0c6a24559f35fa0bd3a5472dc1edcd0111e/assertj-core-3.22.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/junit/junit/4.13.2/8ac9e16d933b6fb43bc7f576336b8f4d7eb5ba12/junit-4.13.2.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.opentest4j/opentest4j/1.3.0/152ea56b3a72f655d4fd677fc0ef2596c3dd5e6e/opentest4j-1.3.0.jar
+/Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.hamcrest/hamcrest-core/1.3/42a25dc3219429f0e5d060061f71acb49bf010a0/hamcrest-core-1.3.jar
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/classes/java/test
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/resources/test
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/test_7bb724a1
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/opentest4j-1.3.0.jar_b91c4147
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/hamcrest-core-1.3.jar_b8a09bd4
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/hamcrest-core-1.3.jar_1de6d972
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/test_1e8efdd8
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/opentest4j-1.3.0.jar_d05fed78
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/test_7c722a91
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/assertj-core-3.22.0.jar_e1a677c1
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/opentest4j-1.3.0.jar_fc85b265
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/assertj-core-3.22.0.jar_ba13904d
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/com.test.obfuscation_tests.jar_1063fa3f
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/assertj-core-3.22.0.jar_15ef4637
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/test_2912adcf
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/hamcrest-core-1.3.jar_0e787500
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/hamcrest-core-1.3.jar_43ed3363
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/opentest4j-1.3.0.jar_f15c16f5
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/assertj-core-3.22.0.jar_c93e457b
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/assertj-core-3.22.0.jar_30e4092f
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/hamcrest-core-1.3.jar_5d2ab12b
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/test_d98cfb00
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/opentest4j-1.3.0.jar_2910cfeb
+/Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/test-results/test/testlist \
+-imagemp \

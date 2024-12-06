@@ -70,6 +70,106 @@ tasks.named('test') {
 
 def obfuscatedClasspathProvider = project.objects.property(FileCollection)
 
+task processAgentOutput {
+    mustRunAfter tasks.named("generateTestResourcesConfigFile")
+
+    outputs.upToDateWhen { false }
+    
+    doLast {
+        println "=== Starting Agent Output Processing ==="
+        
+        def agentOutputDir = file("${buildDir}/resources/test/META-INF/native-image/test")
+        println "Looking for agent output in: ${agentOutputDir.absolutePath}"
+        
+        def proguardMapperScript = file("${rootProject.projectDir}/../../../../../proguard_mapper/proguard_mapper.py")
+        def proguardConfigOutput = file("${buildDir}/proguard-config.pro")
+
+        def result = exec {
+            executable "python3"
+            args proguardMapperScript.absolutePath, 
+                    agentOutputDir.absolutePath,
+                    proguardConfigOutput.absolutePath
+            ignoreExitValue = false
+        }
+
+        if (result.exitValue != 0) {
+            println "ERROR: non-zero exit code from proguard mapping script"
+        }
+
+        println "ProGuard config generated at: ${proguardConfigOutput.absolutePath}"
+        println "ProGuard config content:"
+        println proguardConfigOutput.text
+
+        def nativeTestCompileTask = tasks.named("nativeTestCompile").get()
+        def nativeClasspath = project.files(
+            // Base test classpath (filter out main classes)
+            tasks.named("test").get().classpath.filter { 
+                file(it.absolutePath).exists() &&
+                // Skip testing framework 
+                !it.absolutePath.contains("junit") && 
+                !it.absolutePath.contains("hamcrest-core") && 
+                !it.absolutePath.contains("assertj-core") && 
+                !it.absolutePath.contains("opentest4j") // it.absolutePath.contains("build/classes/java/main") || it.absolutePath.contains("build/resources/main") || 
+            },
+            // Additional native-image specific paths
+            // "${buildDir}/classes/java/test",
+            // "${buildDir}/classes/java/test",
+            // "${buildDir}/resources/test",  
+            // "${buildDir}/test-results/test/testlist",
+            // "${buildDir}/libs/org.liquibase.liquibase-core_tests.jar",
+        )
+        println "Native classpath entries:"
+        nativeClasspath.each { path ->
+            println "${path.absolutePath}"
+        }
+
+        // === Execute ProGuard ===
+        // Create output directory for obfuscated jars
+        def obfuscatedDir = file("${buildDir}/obfuscated-jars")
+        obfuscatedDir.mkdirs()
+
+        def proguardArgs = [
+            "@${proguardConfigOutput.absolutePath}"
+        ]
+
+        // Add input-output jar pairs. 
+        // We don't want to create fat jar since then we cannot keep the manifest files.
+        nativeClasspath.each { inputPath ->
+            def randomPrefix = UUID.randomUUID().toString().take(8)
+            def outputPath = new File(obfuscatedDir, randomPrefix + "_" + inputPath.name)
+            proguardArgs.addAll([
+                "-injars", inputPath.absolutePath,
+                "-outjars", outputPath.absolutePath
+            ])
+        }
+
+        println "Executing proguard with args: ${proguardArgs}"
+        proguardArgs.each { arg -> 
+            println " - ${arg}"
+        }
+        def proguardScript = "/Users/joelrudsberg/Software/proguard-7.6.0/bin/proguard.sh"
+        def proguardResult = exec {
+            executable proguardScript
+            args proguardArgs
+            ignoreExitValue = true // should be false 
+            // maybe not needed 
+            environment('PROGUARD_OPTS', '-Xmx10G -XX:MaxMetaspaceSize=4000M')
+            environment('GRADLE_OPTS', '-Xmx6000m')
+        }
+        
+        if (proguardResult.exitValue == 0) {
+            println "ProGuard execution successful. Saved to ${obfuscatedDir}"
+
+            println "Communicating obfuscated paths to internal.tck"
+            project.setObfuscatedClasspath(project.files(obfuscatedDir.listFiles()))
+        } else {
+            println "ERROR: ProGuard execution failed!"
+        }
+        
+        println "=== Completed Agent Output Processing ==="
+    }
+}
+
 graalvmNative {
     metadataRepository {
         enabled = true
@@ -81,12 +181,20 @@ graalvmNative {
                 excludeConfig.put(libraryGAV, [".*"])
             }
             buildArgs.add('-H:+StrictConfiguration') // Necessary in order to test metadata properly
-            buildArgs.add('-cp')
-            buildArgs.add(providers.provider { obfuscatedClasspathProvider.getOrNull()?.asPath ?: "FAILED" })
+            // TODO: this appends to classpath, and since the original compiled sources are also on the classpath, they
+            // will get picked first... So for now I did a hack were I reverse the classpath string in NI. 
+            classpath(providers.provider { 
+                obfuscatedClasspathProvider.getOrNull()?.files ?: ["FAILED"]
+             })
             verbose = true
             quickBuild = true
         }
     }
+}
+
+tasks.named("nativeTestCompile") {
+    dependsOn processAgentOutput
+    doNotTrackState("becuase of dynamic obfuscatedClasspathProvider") 
 }
 
 project.ext.setObfuscatedClasspath = { FileCollection files ->

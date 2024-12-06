@@ -80,6 +80,10 @@
   "directory" : "com.sun.mail/jakarta.mail",
   "module" : "com.sun.mail:jakarta.mail"
 }, {
+  "allowed-packages" : [ "com.test" ],
+  "directory" : "com.test/obfuscation",
+  "module" : "com.test:obfuscation"
+}, {
   "allowed-packages" : [ "com.zaxxer", "jdk.internal" ],
   "directory" : "com.zaxxer/HikariCP",
   "module" : "com.zaxxer:HikariCP"
