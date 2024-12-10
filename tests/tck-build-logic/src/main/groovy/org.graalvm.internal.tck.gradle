@@ -14,6 +14,7 @@ plugins {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -100,7 +101,8 @@ task processAgentOutput {
         println "ProGuard config content:"
         println proguardConfigOutput.text
 
-        def nativeTestCompileTask = tasks.named("nativeTestCompile").get()
+        // TODO: the classpath entries we skip must still be part of the classpath we inject into NI.
+
         def nativeClasspath = project.files(
             // Base test classpath (filter out main classes)
             tasks.named("test").get().classpath.filter { 
@@ -159,8 +161,7 @@ task processAgentOutput {
         
         if (proguardResult.exitValue == 0) {
             println "ProGuard execution successful. Saved to ${obfuscatedDir}"
-
-            println "Communicating obfuscated paths to internal.tck"
+            println "Setting obfuscated class path..."
             project.setObfuscatedClasspath(project.files(obfuscatedDir.listFiles()))
         } else {
             println "ERROR: ProGuard execution failed!"
@@ -183,9 +184,12 @@ graalvmNative {
             buildArgs.add('-H:+StrictConfiguration') // Necessary in order to test metadata properly
             // TODO: this appends to classpath, and since the original compiled sources are also on the classpath, they
             // will get picked first... So for now I did a hack were I reverse the classpath string in NI. 
-            classpath(providers.provider { 
-                obfuscatedClasspathProvider.getOrNull()?.files ?: ["FAILED"]
-             })
+            println "\nSetting NI classpath to:"
+            classpath = obfuscatedClasspathProvider.getOrNull()?.files ?: ["FAILED"]
+            classpath.each { arg -> 
+                println " - " + arg
+            }
+            setNIClasspath(providers.provider { classpath })
             verbose = true
             quickBuild = true
         }
