@@ -5,7 +5,6 @@
  * work. If not, see <http://creativecommons.org/publicdomain/zero/1.0/>.
  */
 
-
 plugins {
     id 'org.graalvm.internal.tck-base'
     id 'checkstyle'
@@ -101,27 +100,37 @@ task processAgentOutput {
         println "ProGuard config content:"
         println proguardConfigOutput.text
 
-        // TODO: the classpath entries we skip must still be part of the classpath we inject into NI.
-
-        def nativeClasspath = project.files(
-            // Base test classpath (filter out main classes)
-            tasks.named("test").get().classpath.filter { 
-                file(it.absolutePath).exists() &&
-                // Skip testing framework 
-                !it.absolutePath.contains("junit") && 
-                !it.absolutePath.contains("hamcrest-core") && 
-                !it.absolutePath.contains("assertj-core") && 
-                !it.absolutePath.contains("opentest4j") // it.absolutePath.contains("build/classes/java/main") || it.absolutePath.contains("build/resources/main") || 
-            },
-            // Additional native-image specific paths
-            // "${buildDir}/classes/java/test",
-            // "${buildDir}/classes/java/test",
-            // "${buildDir}/resources/test",  
-            // "${buildDir}/test-results/test/testlist",
-            // "${buildDir}/libs/org.liquibase.liquibase-core_tests.jar",
+        println "testClasses classpath:"
+        project.files(
+            tasks.named("test").get().classpath.each { path ->
+                println " - " + path
+            }
         )
-        println "Native classpath entries:"
-        nativeClasspath.each { path ->
+
+        // We shouldn't obfuscate the 
+        def classPathsToObfuscate = []
+        def classPathsNotToObfuscate = []
+        tasks.named("test").get().classpath.each { path -> 
+            def absPath = path.absolutePath
+            def shouldObfuscate = !absPath.contains("junit") && 
+                !absPath.contains("hamcrest-core") && 
+                !absPath.contains("assertj-core") && 
+                !absPath.contains("opentest4j") &&
+                !absPath.contains("apiguardian") &&
+                file(absPath).exists()
+            if (shouldObfuscate) {
+                classPathsToObfuscate.add(path)
+            } else {
+                classPathsNotToObfuscate.add(path)
+            }
+        }
+
+        println "Class paths to obfuscate:"
+        classPathsToObfuscate.each { path ->
+            println "${path.absolutePath}"
+        }
+        println "Class paths to NOT obfuscate:"
+        classPathsNotToObfuscate.each { path ->
             println "${path.absolutePath}"
         }
 
@@ -129,20 +138,27 @@ task processAgentOutput {
         // Create output directory for obfuscated jars
         def obfuscatedDir = file("${buildDir}/obfuscated-jars")
         obfuscatedDir.mkdirs()
-
+        def mappingFileName = "mapping.txt"
         def proguardArgs = [
-            "@${proguardConfigOutput.absolutePath}"
+            "@${proguardConfigOutput.absolutePath}",
+            "-printmapping ${mappingFileName}",
+            "-keep class com_test.obfuscation.ObfuscationTest"
         ]
 
         // Add input-output jar pairs. 
         // We don't want to create fat jar since then we cannot keep the manifest files.
-        nativeClasspath.each { inputPath ->
+        def obfuscatedDirectories = [] // project.files(obfuscatedDir.listFiles())
+        classPathsToObfuscate.each { inputPath ->
             def randomPrefix = UUID.randomUUID().toString().take(8)
             def outputPath = new File(obfuscatedDir, randomPrefix + "_" + inputPath.name)
+            obfuscatedDirectories.add(outputPath)
             proguardArgs.addAll([
                 "-injars", inputPath.absolutePath,
                 "-outjars", outputPath.absolutePath
             ])
+        }
+        def projectFiles = project.files(obfuscatedDir.listFiles()).filter { path ->
+            !path.absolutePath.contains("obfuscatedDir")
         }
 
         println "Executing proguard with args: ${proguardArgs}"
@@ -161,8 +177,13 @@ task processAgentOutput {
         
         if (proguardResult.exitValue == 0) {
             println "ProGuard execution successful. Saved to ${obfuscatedDir}"
-            println "Setting obfuscated class path..."
-            project.setObfuscatedClasspath(project.files(obfuscatedDir.listFiles()))
+            println "Setting obfuscated class path:"
+            def finalClasspath = classPathsNotToObfuscate + obfuscatedDirectories + projectFiles
+            println "Final classpath:"
+            finalClasspath.each { arg ->
+                println " - ${arg}"
+            }
+            project.graalvmNative.binaries.test.setNIClasspath(finalClasspath)
         } else {
             println "ERROR: ProGuard execution failed!"
         }
@@ -182,14 +203,6 @@ graalvmNative {
                 excludeConfig.put(libraryGAV, [".*"])
             }
             buildArgs.add('-H:+StrictConfiguration') // Necessary in order to test metadata properly
-            // TODO: this appends to classpath, and since the original compiled sources are also on the classpath, they
-            // will get picked first... So for now I did a hack were I reverse the classpath string in NI. 
-            println "\nSetting NI classpath to:"
-            classpath = obfuscatedClasspathProvider.getOrNull()?.files ?: ["FAILED"]
-            classpath.each { arg -> 
-                println " - " + arg
-            }
-            setNIClasspath(providers.provider { classpath })
             verbose = true
             quickBuild = true
         }
