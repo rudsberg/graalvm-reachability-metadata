@@ -77,8 +77,22 @@ task processAgentOutput {
     
     doLast {
         println "=== Starting Agent Output Processing ==="
+        def graalvmHome = System.getenv('GRAALVM_HOME')
+        if (!graalvmHome) {
+            throw new GradleException("GRAALVM_HOME env variable must be set")
+        }
+        def jmodsDir = new File("${graalvmHome}/jmods")
+        if (!jmodsDir) {
+            throw new GradleException("${jmodsDir.absolutePath} not found")
+        }
+        def libraryJars = []
+        jmodsDir.listFiles().each { file -> 
+            if (file.absolutePath.endsWith(".jmod")) {
+                libraryJars.add("-libraryjars ${file.absolutePath}")
+            }
+        }
         
-        def agentOutputDir = file("${buildDir}/resources/test/META-INF/native-image/test")
+        def agentOutputDir = file("${buildDir}/resources/test/META-INF/native-image")
         println "Looking for agent output in: ${agentOutputDir.absolutePath}"
         
         def proguardMapperScript = file("${rootProject.projectDir}/../../../../../proguard_mapper/proguard_mapper.py")
@@ -117,6 +131,7 @@ task processAgentOutput {
                 !absPath.contains("assertj-core") && 
                 !absPath.contains("opentest4j") &&
                 !absPath.contains("apiguardian") &&
+                !absPath.contains("resources/test") &&
                 file(absPath).exists()
             if (shouldObfuscate) {
                 classPathsToObfuscate.add(path)
@@ -141,8 +156,23 @@ task processAgentOutput {
         def mappingFileName = "mapping.txt"
         def proguardArgs = [
             "@${proguardConfigOutput.absolutePath}",
+            // TODO: need to add svm runtime as library jar to get rid of warnings "-libraryjars",
+            // how does mx do that? 
             "-printmapping ${mappingFileName}",
-            "-keep class com_test.obfuscation.ObfuscationTest"
+            "-ignorewarning",
+            // TODO: hardcoding - cannot obfuscate junit classes/methods, OR we can but the must update the junit list that is generated
+            "-keep class com_test.obfuscation.ObfuscationTest",
+            
+            "-keep class ch_qos_logback_contrib.logback_jackson.LogbackJacksonTest",
+            "-keep class ch.qos.logback.core.ConsoleAppender",
+            "-keep class ch.qos.logback.core.encoder.LayoutWrappingEncoder",
+            "-keep class ch.qos.logback.contrib.json.classic.JsonLayout",
+            "-keep class ch.qos.logback.contrib.jackson.JacksonJsonFormatter",
+            
+            "-keepattributes Module*",
+            "-keep class module-info",
+
+            *libraryJars
         ]
 
         // Add input-output jar pairs. 

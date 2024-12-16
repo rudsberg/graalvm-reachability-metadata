@@ -16,49 +16,55 @@ def read_config_file(directory, filename):
                 return config.get("resources", {}).get("includes", [])
     return []
 
-def generate_proguard_config_str(input_dir):
+def generate_proguard_config_str(root_dir):
     # Required entries that are always present
     config_entries = [
-        "-dontwarn",
         "-dontnote",
         "-keepdirectories",
         "-dontusemixedcaseclassnames",
-        "-keepattributes *Annotation*,Signature,EnclosingMethod,InnerClasses",
+        "-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,RuntimeVisible*Annotations,EnclosingMethod,AnnotationDefault",
+        
+        # Temporary 
         "-keepparameternames",
+        "-keeppackagenames **",
+        
         "-dontoptimize",
         "-dontpreverify", 
         "-dontshrink",
         "-adaptclassstrings",
         "-keepclassmembers class * { *** *(...); }"
     ]
+    
+    # Search until any file matches 
+    for _dir, _, _ in os.walk(root_dir):
+        print("Searching for config files in " + _dir)
+        reflect_entries = read_config_file(_dir, "reflect-config.json")
+        if reflect_entries:
+            print('Found reflect-config.json: ', os.path.join(_dir, "reflect-config.json"))
+            config_entries.extend([
+                "",
+                "# Keep classes from reflect-config.json"
+            ])
+            for entry in reflect_entries:
+                if "name" in entry:
+                    config_entries.append(f"-keep class {entry['name']}")
 
-    # Read reflect-config.json
-    reflect_entries = read_config_file(input_dir, "reflect-config.json")
-    if reflect_entries:
-        config_entries.extend([
-            "",
-            "# Keep classes from reflect-config.json"
-        ])
-        for entry in reflect_entries:
-            if "name" in entry:
-                config_entries.append(f"-keep class {entry['name']}")
-    else: 
-        print('No file found in ' + os.path.join(input_dir, "reflect-config.json"))
-
-    # Read resource-config.json
-    resource_entries = read_config_file(input_dir, "resource-config.json")
-    if resource_entries:
-        config_entries.extend([
-            "",
-            "# Keep resources from resource-config.json"
-        ])
-        for entry in resource_entries:
-            if "pattern" in entry:
-                # Strip \Q and \E from pattern
-                pattern = entry["pattern"].replace("\\Q", "").replace("\\E", "")
-                config_entries.append(f"-keepresources {pattern}")
-    else:
-        print('No file found in ' + os.path.join(input_dir, "resource-config.json"))
+        # Read resource-config.json
+        resource_entries = read_config_file(_dir, "resource-config.json")
+        if resource_entries:
+            print('Found resource-config.json: ', os.path.join(_dir, "reflect-config.json"))
+            config_entries.extend([
+                "",
+                "# Keep resources from resource-config.json"
+            ])
+            for entry in resource_entries:
+                if "pattern" in entry:
+                    # Strip \Q and \E from pattern
+                    pattern = entry["pattern"].replace("\\Q", "").replace("\\E", "")
+                    config_entries.append(f"-keepresources {pattern}")
+            
+        if reflect_entries or resource_entries:
+            break
 
     return "\n".join(config_entries)
 

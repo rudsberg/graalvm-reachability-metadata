@@ -1,0 +1,25 @@
+ /Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.assertj/assertj-core/3.22.0/c300c0c6a24559f35fa0bd3a5472dc1edcd0111e/assertj-core-3.22.0.jar
+ /Users/joelrudsberg/.gradle/caches/modules-2/files-2.1/org.junit.vintage/junit-vintage-engine/5.10.0/af4e0a3cb6901aa53d6401003fc10638014b39b1/junit-vintage-engine-5.10.0.jar
+ /Users/joelrudsberg/.m2/repository/junit/junit/4.13.2/junit-4.13.2.jar
+ /Users/joelrudsberg/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar
+ /Users/joelrudsberg/.m2/repository/org/graalvm/buildtools/junit-platform-native/0.10.5/junit-platform-native-0.10.5.jar
+ /Users/joelrudsberg/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.10.0/junit-jupiter-params-5.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/jupiter/junit-jupiter/5.10.0/junit-jupiter-5.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/platform/junit-platform-console/1.10.0/junit-platform-console-1.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/platform/junit-platform-launcher/1.10.0/junit-platform-launcher-1.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/junit/platform/junit-platform-reporting/1.10.0/junit-platform-reporting-1.10.0.jar
+ /Users/joelrudsberg/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar
+ /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/classes/java/main
+ /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/6c0d117f_test
+ /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/obfuscated-jars/7863939d_json-20240303.jar
+ /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/resources/main
+ /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/resources/test
+
+Difference to NI classpath input:
+* NI gets a jar of the tests, like com.test.obfuscation_tests.jar, but that should be simply the contents of /Users/joelrudsberg/dev/graalvm-reachability-metadata/tests/src/com.test/obfuscation/1.0.0/build/classes/java/main
+* 
