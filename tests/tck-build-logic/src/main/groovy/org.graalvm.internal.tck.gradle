@@ -121,7 +121,6 @@ task processAgentOutput {
             }
         )
 
-        // We shouldn't obfuscate the 
         def classPathsToObfuscate = []
         def classPathsNotToObfuscate = []
         tasks.named("test").get().classpath.each { path -> 
@@ -137,6 +136,9 @@ task processAgentOutput {
                 classPathsToObfuscate.add(path)
             } else {
                 classPathsNotToObfuscate.add(path)
+                if (file(absPath).exists()) {
+                    libraryJars.add("-libraryjars ${path}")
+                }
             }
         }
 
@@ -156,13 +158,10 @@ task processAgentOutput {
         def mappingFileName = "mapping.txt"
         def proguardArgs = [
             "@${proguardConfigOutput.absolutePath}",
-            // TODO: need to add svm runtime as library jar to get rid of warnings "-libraryjars",
-            // how does mx do that? 
             "-printmapping ${mappingFileName}",
-            "-ignorewarning",
-            // TODO: hardcoding - cannot obfuscate junit classes/methods, OR we can but the must update the junit list that is generated
-            "-keep class com_test.obfuscation.ObfuscationTest",
-            
+            // "-ignorewarning",
+
+            // TODO: hardcoding - cannot obfuscate junit classes/methods, OR we can but then must update the junit list that is generated
             "-keep class ch_qos_logback_contrib.logback_jackson.LogbackJacksonTest",
             "-keep class ch.qos.logback.core.ConsoleAppender",
             "-keep class ch.qos.logback.core.encoder.LayoutWrappingEncoder",
@@ -172,12 +171,12 @@ task processAgentOutput {
             "-keepattributes Module*",
             "-keep class module-info",
 
-            *libraryJars
+            *libraryJars,
         ]
 
         // Add input-output jar pairs. 
         // We don't want to create fat jar since then we cannot keep the manifest files.
-        def obfuscatedDirectories = [] // project.files(obfuscatedDir.listFiles())
+        def obfuscatedDirectories = []
         classPathsToObfuscate.each { inputPath ->
             def randomPrefix = UUID.randomUUID().toString().take(8)
             def outputPath = new File(obfuscatedDir, randomPrefix + "_" + inputPath.name)
@@ -199,10 +198,9 @@ task processAgentOutput {
         def proguardResult = exec {
             executable proguardScript
             args proguardArgs
-            ignoreExitValue = true // should be false 
-            // maybe not needed 
-            environment('PROGUARD_OPTS', '-Xmx10G -XX:MaxMetaspaceSize=4000M')
-            environment('GRADLE_OPTS', '-Xmx6000m')
+            // ignoreExitValue = true
+            // environment('PROGUARD_OPTS', '-Xmx10G -XX:MaxMetaspaceSize=4000M')
+            // environment('GRADLE_OPTS', '-Xmx6000m')
         }
         
         if (proguardResult.exitValue == 0) {

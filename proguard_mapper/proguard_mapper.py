@@ -22,7 +22,7 @@ def generate_proguard_config_str(root_dir):
         "-dontnote",
         "-keepdirectories",
         "-dontusemixedcaseclassnames",
-        "-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,RuntimeVisible*Annotations,EnclosingMethod,AnnotationDefault",
+        "-keepattributes Exceptions,InnerClasses,Signature,Deprecated,SourceFile,LineNumberTable,RuntimeVisible*Annotations,EnclosingMethod,AnnotationDefault,*Annotation*",
         
         # Temporary 
         "-keepparameternames",
