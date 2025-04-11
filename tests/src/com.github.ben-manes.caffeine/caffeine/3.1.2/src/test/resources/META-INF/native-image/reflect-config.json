@@ -1,0 +1,20 @@
+[
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.CaffeineTest"
+    },
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.ComputeTest"
+    },
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.EvictionTest"
+    },
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.PolicyTest"
+    },
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.PopulationTest"
+    },
+    {
+        "name": "com_github_ben_manes_caffeine.caffeine.RemovalTest"
+    }
+]

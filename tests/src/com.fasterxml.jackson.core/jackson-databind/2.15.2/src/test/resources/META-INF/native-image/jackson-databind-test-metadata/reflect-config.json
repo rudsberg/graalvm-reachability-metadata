@@ -46,5 +46,25 @@
     "allDeclaredConstructors": true,
     "allDeclaredMethods": true,
     "allDeclaredFields": true
+  },
+
+  
+  {
+    "name": "com_fasterxml_jackson_core.jackson_databind.JacksonConstructorPropertiesTest",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "com_fasterxml_jackson_core.jackson_databind.JacksonNamingStrategyTest",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
+  },
+  {
+    "name": "com_fasterxml_jackson_core.jackson_databind.JacksonOptionalSerializersTest",
+    "allDeclaredConstructors": true,
+    "allDeclaredMethods": true,
+    "allDeclaredFields": true
   }
 ]

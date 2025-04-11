@@ -77,6 +77,10 @@ task processAgentOutput {
     
     doLast {
         println "=== Starting Agent Output Processing ==="
+        // if (file(buildDir).exists()) {
+        //     buildDir.deleteDir()
+        // }
+
         def graalvmHome = System.getenv('GRAALVM_HOME')
         if (!graalvmHome) {
             throw new GradleException("GRAALVM_HOME env variable must be set")
@@ -125,6 +129,8 @@ task processAgentOutput {
         def classPathsNotToObfuscate = []
         tasks.named("test").get().classpath.each { path -> 
             def absPath = path.absolutePath
+            println "${absPath} EXISTS ${file(absPath).exists()}"
+
             def shouldObfuscate = !absPath.contains("junit") && 
                 !absPath.contains("hamcrest-core") && 
                 !absPath.contains("assertj-core") && 
@@ -135,6 +141,9 @@ task processAgentOutput {
             if (shouldObfuscate) {
                 classPathsToObfuscate.add(path)
             } else {
+                if (absPath.contains("build/classes/java")) {
+                    return 
+                }
                 classPathsNotToObfuscate.add(path)
                 if (file(absPath).exists()) {
                     libraryJars.add("-libraryjars ${path}")
@@ -159,7 +168,7 @@ task processAgentOutput {
         def proguardArgs = [
             "@${proguardConfigOutput.absolutePath}",
             "-printmapping ${mappingFileName}",
-            // "-ignorewarning",
+            "-ignorewarning",
 
             // TODO: hardcoding - cannot obfuscate junit classes/methods, OR we can but then must update the junit list that is generated
             "-keep class ch_qos_logback_contrib.logback_jackson.LogbackJacksonTest",
@@ -188,6 +197,10 @@ task processAgentOutput {
         }
         def projectFiles = project.files(obfuscatedDir.listFiles()).filter { path ->
             !path.absolutePath.contains("obfuscatedDir")
+        }
+        println "Project files:"
+        projectFiles.each { file ->
+            println "${file.absolutePath}"
         }
 
         println "Executing proguard with args: ${proguardArgs}"

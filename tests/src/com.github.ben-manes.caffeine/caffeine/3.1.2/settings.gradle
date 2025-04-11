@@ -1,4 +1,10 @@
 pluginManagement {
+    repositories {
+        mavenLocal()
+        gradlePluginPortal()
+        mavenCentral()
+    }
+
     def tckPath = Objects.requireNonNullElse(
             System.getenv("GVM_TCK_TCKDIR"),
             "../../../../tck-build-logic"

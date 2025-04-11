@@ -1,360 +1,382 @@
 com_test.obfuscation.ObfuscationTest -> com_test.obfuscation.ObfuscationTest:
-    void <init>() -> <init>
-    void test() -> test
-org.json.CDL -> a.a.a:
-    void <init>() -> <init>
-    java.lang.String getValue(org.json.JSONTokener,char) -> getValue
-    org.json.JSONArray rowToJSONArray(org.json.JSONTokener) -> rowToJSONArray
-    org.json.JSONArray rowToJSONArray(org.json.JSONTokener,char) -> rowToJSONArray
-    org.json.JSONObject rowToJSONObject(org.json.JSONArray,org.json.JSONTokener) -> rowToJSONObject
-    org.json.JSONObject rowToJSONObject(org.json.JSONArray,org.json.JSONTokener,char) -> rowToJSONObject
-    java.lang.String rowToString(org.json.JSONArray) -> rowToString
-    java.lang.String rowToString(org.json.JSONArray,char) -> rowToString
-    org.json.JSONArray toJSONArray(java.lang.String) -> toJSONArray
-    org.json.JSONArray toJSONArray(java.lang.String,char) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONTokener) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONTokener,char) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONArray,java.lang.String) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONArray,java.lang.String,char) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONArray,org.json.JSONTokener) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.JSONArray,org.json.JSONTokener,char) -> toJSONArray
-    java.lang.String toString(org.json.JSONArray) -> toString
-    java.lang.String toString(org.json.JSONArray,char) -> toString
-    java.lang.String toString(org.json.JSONArray,org.json.JSONArray) -> toString
-    java.lang.String toString(org.json.JSONArray,org.json.JSONArray,char) -> toString
-org.json.Cookie -> a.a.b:
-    void <init>() -> <init>
-    java.lang.String escape(java.lang.String) -> escape
-    org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
-    java.lang.String toString(org.json.JSONObject) -> toString
-    java.lang.String unescape(java.lang.String) -> unescape
-org.json.CookieList -> a.a.c:
-    void <init>() -> <init>
-    org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
-    java.lang.String toString(org.json.JSONObject) -> toString
-org.json.HTTP -> a.a.d:
+# {"fileName":"ObfuscationTest.java","id":"sourceFile"}
+    15:15:void <init>() -> <init>
+    18:22:void test() -> test
+org.json.CDL -> org.json.a:
+# {"fileName":"CDL.java","id":"sourceFile"}
+    31:32:void <init>() -> <init>
+    47:78:java.lang.String getValue(org.json.JSONTokener,char) -> getValue
+    88:88:org.json.JSONArray rowToJSONArray(org.json.JSONTokener) -> rowToJSONArray
+    99:121:org.json.JSONArray rowToJSONArray(org.json.JSONTokener,char) -> rowToJSONArray
+    135:135:org.json.JSONObject rowToJSONObject(org.json.JSONArray,org.json.JSONTokener) -> rowToJSONObject
+    150:151:org.json.JSONObject rowToJSONObject(org.json.JSONArray,org.json.JSONTokener,char) -> rowToJSONObject
+    162:162:java.lang.String rowToString(org.json.JSONArray) -> rowToString
+    174:200:java.lang.String rowToString(org.json.JSONArray,char) -> rowToString
+    211:211:org.json.JSONArray toJSONArray(java.lang.String) -> toJSONArray
+    223:223:org.json.JSONArray toJSONArray(java.lang.String,char) -> toJSONArray
+    234:234:org.json.JSONArray toJSONArray(org.json.JSONTokener) -> toJSONArray
+    246:246:org.json.JSONArray toJSONArray(org.json.JSONTokener,char) -> toJSONArray
+    258:258:org.json.JSONArray toJSONArray(org.json.JSONArray,java.lang.String) -> toJSONArray
+    271:271:org.json.JSONArray toJSONArray(org.json.JSONArray,java.lang.String,char) -> toJSONArray
+    283:283:org.json.JSONArray toJSONArray(org.json.JSONArray,org.json.JSONTokener) -> toJSONArray
+    296:310:org.json.JSONArray toJSONArray(org.json.JSONArray,org.json.JSONTokener,char) -> toJSONArray
+    323:323:java.lang.String toString(org.json.JSONArray) -> toString
+    336:343:java.lang.String toString(org.json.JSONArray,char) -> toString
+    356:356:java.lang.String toString(org.json.JSONArray,org.json.JSONArray) -> toString
+    370:380:java.lang.String toString(org.json.JSONArray,org.json.JSONArray,char) -> toString
+org.json.Cookie -> org.json.b:
+# {"fileName":"Cookie.java","id":"sourceFile"}
+    21:22:void <init>() -> <init>
+    38:51:java.lang.String escape(java.lang.String) -> escape
+    76:117:org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
+    133:180:java.lang.String toString(org.json.JSONObject) -> toString
+    192:208:java.lang.String unescape(java.lang.String) -> unescape
+org.json.CookieList -> org.json.c:
+# {"fileName":"CookieList.java","id":"sourceFile"}
+    17:18:void <init>() -> <init>
+    34:42:org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
+    55:70:java.lang.String toString(org.json.JSONObject) -> toString
+org.json.HTTP -> org.json.d:
+# {"fileName":"HTTP.java","id":"sourceFile"}
     java.lang.String CRLF -> a
-    void <init>() -> <init>
-    org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
-    java.lang.String toString(org.json.JSONObject) -> toString
-org.json.HTTPTokener -> a.a.e:
-    void <init>(java.lang.String) -> <init>
-    java.lang.String nextToken() -> nextToken
-org.json.JSONArray -> a.a.f:
+    19:20:void <init>() -> <init>
+    58:89:org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
+    114:146:java.lang.String toString(org.json.JSONObject) -> toString
+org.json.HTTPTokener -> org.json.e:
+# {"fileName":"HTTPTokener.java","id":"sourceFile"}
+    20:21:void <init>(java.lang.String) -> <init>
+    32:54:java.lang.String nextToken() -> nextToken
+org.json.JSONArray -> org.json.f:
+# {"fileName":"JSONArray.java","id":"sourceFile"}
     java.util.ArrayList myArrayList -> a
-    void <init>() -> <init>
-    void <init>(org.json.JSONTokener) -> <init>
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.util.Collection) -> <init>
-    void <init>(java.util.Collection,org.json.JSONParserConfiguration) -> <init>
-    void <init>(java.util.Collection,int,org.json.JSONParserConfiguration) -> <init>
-    void <init>(java.lang.Iterable) -> <init>
-    void <init>(org.json.JSONArray) -> <init>
-    void <init>(java.lang.Object) -> <init>
-    void <init>(int) -> <init>
-    java.util.Iterator iterator() -> iterator
-    java.lang.Object get(int) -> get
-    boolean getBoolean(int) -> getBoolean
-    double getDouble(int) -> getDouble
-    float getFloat(int) -> getFloat
-    java.lang.Number getNumber(int) -> getNumber
-    java.lang.Enum getEnum(java.lang.Class,int) -> getEnum
-    java.math.BigDecimal getBigDecimal(int) -> getBigDecimal
-    java.math.BigInteger getBigInteger(int) -> getBigInteger
-    int getInt(int) -> getInt
-    org.json.JSONArray getJSONArray(int) -> getJSONArray
-    org.json.JSONObject getJSONObject(int) -> getJSONObject
-    long getLong(int) -> getLong
-    java.lang.String getString(int) -> getString
-    boolean isNull(int) -> isNull
-    java.lang.String join(java.lang.String) -> join
-    int length() -> length
-    void clear() -> clear
-    java.lang.Object opt(int) -> opt
-    boolean optBoolean(int) -> optBoolean
-    boolean optBoolean(int,boolean) -> optBoolean
-    java.lang.Boolean optBooleanObject(int) -> optBooleanObject
-    java.lang.Boolean optBooleanObject(int,java.lang.Boolean) -> optBooleanObject
-    double optDouble(int) -> optDouble
-    double optDouble(int,double) -> optDouble
-    java.lang.Double optDoubleObject(int) -> optDoubleObject
-    java.lang.Double optDoubleObject(int,java.lang.Double) -> optDoubleObject
-    float optFloat(int) -> optFloat
-    float optFloat(int,float) -> optFloat
-    java.lang.Float optFloatObject(int) -> optFloatObject
-    java.lang.Float optFloatObject(int,java.lang.Float) -> optFloatObject
-    int optInt(int) -> optInt
-    int optInt(int,int) -> optInt
-    java.lang.Integer optIntegerObject(int) -> optIntegerObject
-    java.lang.Integer optIntegerObject(int,java.lang.Integer) -> optIntegerObject
-    java.lang.Enum optEnum(java.lang.Class,int) -> optEnum
-    java.lang.Enum optEnum(java.lang.Class,int,java.lang.Enum) -> optEnum
-    java.math.BigInteger optBigInteger(int,java.math.BigInteger) -> optBigInteger
-    java.math.BigDecimal optBigDecimal(int,java.math.BigDecimal) -> optBigDecimal
-    org.json.JSONArray optJSONArray(int) -> optJSONArray
-    org.json.JSONArray optJSONArray(int,org.json.JSONArray) -> optJSONArray
-    org.json.JSONObject optJSONObject(int) -> optJSONObject
-    org.json.JSONObject optJSONObject(int,org.json.JSONObject) -> optJSONObject
-    long optLong(int) -> optLong
-    long optLong(int,long) -> optLong
-    java.lang.Long optLongObject(int) -> optLongObject
-    java.lang.Long optLongObject(int,java.lang.Long) -> optLongObject
-    java.lang.Number optNumber(int) -> optNumber
-    java.lang.Number optNumber(int,java.lang.Number) -> optNumber
-    java.lang.String optString(int) -> optString
-    java.lang.String optString(int,java.lang.String) -> optString
-    org.json.JSONArray put(boolean) -> put
-    org.json.JSONArray put(java.util.Collection) -> put
-    org.json.JSONArray put(double) -> put
-    org.json.JSONArray put(float) -> put
-    org.json.JSONArray put(int) -> put
-    org.json.JSONArray put(long) -> put
-    org.json.JSONArray put(java.util.Map) -> put
-    org.json.JSONArray put(java.lang.Object) -> put
-    org.json.JSONArray put(int,boolean) -> put
-    org.json.JSONArray put(int,java.util.Collection) -> put
-    org.json.JSONArray put(int,double) -> put
-    org.json.JSONArray put(int,float) -> put
-    org.json.JSONArray put(int,int) -> put
-    org.json.JSONArray put(int,long) -> put
-    org.json.JSONArray put(int,java.util.Map) -> put
-    org.json.JSONArray put(int,java.util.Map,org.json.JSONParserConfiguration) -> put
-    org.json.JSONArray put(int,java.lang.Object) -> put
-    org.json.JSONArray putAll(java.util.Collection) -> putAll
-    org.json.JSONArray putAll(java.lang.Iterable) -> putAll
-    org.json.JSONArray putAll(org.json.JSONArray) -> putAll
-    org.json.JSONArray putAll(java.lang.Object) -> putAll
-    java.lang.Object query(java.lang.String) -> query
-    java.lang.Object query(org.json.JSONPointer) -> query
-    java.lang.Object optQuery(java.lang.String) -> optQuery
-    java.lang.Object optQuery(org.json.JSONPointer) -> optQuery
-    java.lang.Object remove(int) -> remove
-    boolean similar(java.lang.Object) -> similar
-    org.json.JSONObject toJSONObject(org.json.JSONArray) -> toJSONObject
-    java.lang.String toString() -> toString
-    java.lang.String toString(int) -> toString
-    java.io.Writer write(java.io.Writer) -> write
-    java.io.Writer write(java.io.Writer,int,int) -> write
-    java.util.List toList() -> toList
-    boolean isEmpty() -> isEmpty
-    void addAll(java.util.Collection,boolean,int,org.json.JSONParserConfiguration) -> addAll
-    void addAll(java.lang.Iterable,boolean) -> addAll
-    void addAll(java.lang.Object,boolean) -> addAll
-    void addAll(java.lang.Object,boolean,int) -> addAll
-    void addAll(java.lang.Object,boolean,int,org.json.JSONParserConfiguration) -> addAll
-    org.json.JSONException wrongValueFormatException(int,java.lang.String,java.lang.Object,java.lang.Throwable) -> wrongValueFormatException
-org.json.JSONException -> a.a.g:
+    74:76:void <init>() -> <init>
+    87:129:void <init>(org.json.JSONTokener) -> <init>
+    142:143:void <init>(java.lang.String) -> <init>
+    152:153:void <init>(java.util.Collection) -> <init>
+    164:165:void <init>(java.util.Collection,org.json.JSONParserConfiguration) -> <init>
+    177:187:void <init>(java.util.Collection,int,org.json.JSONParserConfiguration) -> <init>
+    196:201:void <init>(java.lang.Iterable) -> <init>
+    209:217:void <init>(org.json.JSONArray) -> <init>
+    232:238:void <init>(java.lang.Object) -> <init>
+    248:254:void <init>(int) -> <init>
+    258:258:java.util.Iterator iterator() -> iterator
+    271:275:java.lang.Object get(int) -> get
+    290:300:boolean getBoolean(int) -> getBoolean
+    314:321:double getDouble(int) -> getDouble
+    336:343:float getFloat(int) -> getFloat
+    358:365:java.lang.Number getNumber(int) -> getNumber
+    384:392:java.lang.Enum getEnum(java.lang.Class,int) -> getEnum
+    409:414:java.math.BigDecimal getBigDecimal(int) -> getBigDecimal
+    428:433:java.math.BigInteger getBigInteger(int) -> getBigInteger
+    446:453:int getInt(int) -> getInt
+    468:472:org.json.JSONArray getJSONArray(int) -> getJSONArray
+    486:490:org.json.JSONObject getJSONObject(int) -> getJSONObject
+    504:511:long getLong(int) -> getLong
+    525:529:java.lang.String getString(int) -> getString
+    540:540:boolean isNull(int) -> isNull
+    555:567:java.lang.String join(java.lang.String) -> join
+    576:576:int length() -> length
+    584:585:void clear() -> clear
+    595:596:java.lang.Object opt(int) -> opt
+    609:609:boolean optBoolean(int) -> optBoolean
+    625:627:boolean optBoolean(int,boolean) -> optBoolean
+    641:641:java.lang.Boolean optBooleanObject(int) -> optBooleanObject
+    657:659:java.lang.Boolean optBooleanObject(int,java.lang.Boolean) -> optBooleanObject
+    673:673:double optDouble(int) -> optDouble
+    688:696:double optDouble(int,double) -> optDouble
+    709:709:java.lang.Double optDoubleObject(int) -> optDoubleObject
+    724:732:java.lang.Double optDoubleObject(int,java.lang.Double) -> optDoubleObject
+    745:745:float optFloat(int) -> optFloat
+    760:768:float optFloat(int,float) -> optFloat
+    781:781:java.lang.Float optFloatObject(int) -> optFloatObject
+    796:804:java.lang.Float optFloatObject(int,java.lang.Float) -> optFloatObject
+    817:817:int optInt(int) -> optInt
+    832:836:int optInt(int,int) -> optInt
+    849:849:java.lang.Integer optIntegerObject(int) -> optIntegerObject
+    864:868:java.lang.Integer optIntegerObject(int,java.lang.Integer) -> optIntegerObject
+    883:883:java.lang.Enum optEnum(java.lang.Class,int) -> optEnum
+    902:916:java.lang.Enum optEnum(java.lang.Class,int,java.lang.Enum) -> optEnum
+    932:933:java.math.BigInteger optBigInteger(int,java.math.BigInteger) -> optBigInteger
+    951:952:java.math.BigDecimal optBigDecimal(int,java.math.BigDecimal) -> optBigDecimal
+    964:964:org.json.JSONArray optJSONArray(int) -> optJSONArray
+    978:979:org.json.JSONArray optJSONArray(int,org.json.JSONArray) -> optJSONArray
+    991:991:org.json.JSONObject optJSONObject(int) -> optJSONObject
+    1005:1006:org.json.JSONObject optJSONObject(int,org.json.JSONObject) -> optJSONObject
+    1019:1019:long optLong(int) -> optLong
+    1034:1038:long optLong(int,long) -> optLong
+    1051:1051:java.lang.Long optLongObject(int) -> optLongObject
+    1066:1070:java.lang.Long optLongObject(int,java.lang.Long) -> optLongObject
+    1084:1084:java.lang.Number optNumber(int) -> optNumber
+    1100:1115:java.lang.Number optNumber(int,java.lang.Number) -> optNumber
+    1128:1128:java.lang.String optString(int) -> optString
+    1142:1144:java.lang.String optString(int,java.lang.String) -> optString
+    1155:1155:org.json.JSONArray put(boolean) -> put
+    1169:1169:org.json.JSONArray put(java.util.Collection) -> put
+    1182:1182:org.json.JSONArray put(double) -> put
+    1195:1195:org.json.JSONArray put(float) -> put
+    1206:1206:org.json.JSONArray put(int) -> put
+    1217:1217:org.json.JSONArray put(long) -> put
+    1233:1233:org.json.JSONArray put(java.util.Map) -> put
+    1248:1250:org.json.JSONArray put(java.lang.Object) -> put
+    1267:1267:org.json.JSONArray put(int,boolean) -> put
+    1283:1283:org.json.JSONArray put(int,java.util.Collection) -> put
+    1300:1300:org.json.JSONArray put(int,double) -> put
+    1317:1317:org.json.JSONArray put(int,float) -> put
+    1334:1334:org.json.JSONArray put(int,int) -> put
+    1351:1351:org.json.JSONArray put(int,long) -> put
+    1371:1372:org.json.JSONArray put(int,java.util.Map) -> put
+    1391:1392:org.json.JSONArray put(int,java.util.Map,org.json.JSONParserConfiguration) -> put
+    1412:1431:org.json.JSONArray put(int,java.lang.Object) -> put
+    1442:1443:org.json.JSONArray putAll(java.util.Collection) -> putAll
+    1454:1455:org.json.JSONArray putAll(java.lang.Iterable) -> putAll
+    1468:1469:org.json.JSONArray putAll(org.json.JSONArray) -> putAll
+    1486:1487:org.json.JSONArray putAll(java.lang.Object) -> putAll
+    1510:1510:java.lang.Object query(java.lang.String) -> query
+    1533:1533:java.lang.Object query(org.json.JSONPointer) -> query
+    1545:1545:java.lang.Object optQuery(java.lang.String) -> optQuery
+    1558:1560:java.lang.Object optQuery(org.json.JSONPointer) -> optQuery
+    1573:1574:java.lang.Object remove(int) -> remove
+    1586:1622:boolean similar(java.lang.Object) -> similar
+    1638:1645:org.json.JSONObject toJSONObject(org.json.JSONArray) -> toJSONObject
+    1663:1665:java.lang.String toString() -> toString
+    1698:1699:java.lang.String toString(int) -> toString
+    1713:1713:java.io.Writer write(java.io.Writer) -> write
+    1748:1786:java.io.Writer write(java.io.Writer,int,int) -> write
+    1800:1812:java.util.List toList() -> toList
+    1821:1821:boolean isEmpty() -> isEmpty
+    1836:1846:void addAll(java.util.Collection,boolean,int,org.json.JSONParserConfiguration) -> addAll
+    1858:1867:void addAll(java.lang.Iterable,boolean) -> addAll
+    1883:1884:void addAll(java.lang.Object,boolean) -> addAll
+    1900:1901:void addAll(java.lang.Object,boolean,int) -> addAll
+    1922:1947:void addAll(java.lang.Object,boolean,int,org.json.JSONParserConfiguration) -> addAll
+    1961:1973:org.json.JSONException wrongValueFormatException(int,java.lang.String,java.lang.Object,java.lang.Throwable) -> wrongValueFormatException
+org.json.JSONException -> org.json.g:
+# {"fileName":"JSONException.java","id":"sourceFile"}
     long serialVersionUID -> a
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.lang.String,java.lang.Throwable) -> <init>
-    void <init>(java.lang.Throwable) -> <init>
-org.json.JSONML -> a.a.h:
-    void <init>() -> <init>
-    java.lang.Object parse(org.json.XMLTokener,boolean,org.json.JSONArray,boolean,int) -> parse
-    java.lang.Object parse(org.json.XMLTokener,boolean,org.json.JSONArray,org.json.JSONMLParserConfiguration,int) -> parse
-    org.json.JSONArray toJSONArray(java.lang.String) -> toJSONArray
-    org.json.JSONArray toJSONArray(java.lang.String,boolean) -> toJSONArray
-    org.json.JSONArray toJSONArray(java.lang.String,org.json.JSONMLParserConfiguration) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.XMLTokener,org.json.JSONMLParserConfiguration) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.XMLTokener,boolean) -> toJSONArray
-    org.json.JSONArray toJSONArray(org.json.XMLTokener) -> toJSONArray
-    org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.lang.String,boolean) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.lang.String,org.json.JSONMLParserConfiguration) -> toJSONObject
-    org.json.JSONObject toJSONObject(org.json.XMLTokener) -> toJSONObject
-    org.json.JSONObject toJSONObject(org.json.XMLTokener,boolean) -> toJSONObject
-    org.json.JSONObject toJSONObject(org.json.XMLTokener,org.json.JSONMLParserConfiguration) -> toJSONObject
-    java.lang.String toString(org.json.JSONArray) -> toString
-    java.lang.String toString(org.json.JSONObject) -> toString
-org.json.JSONMLParserConfiguration -> a.a.i:
+    24:25:void <init>(java.lang.String) -> <init>
+    36:37:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+    46:47:void <init>(java.lang.Throwable) -> <init>
+org.json.JSONML -> org.json.h:
+# {"fileName":"JSONML.java","id":"sourceFile"}
+    20:21:void <init>() -> <init>
+    40:40:java.lang.Object parse(org.json.XMLTokener,boolean,org.json.JSONArray,boolean,int) -> parse
+    66:243:java.lang.Object parse(org.json.XMLTokener,boolean,org.json.JSONArray,org.json.JSONMLParserConfiguration,int) -> parse
+    264:264:org.json.JSONArray toJSONArray(java.lang.String) -> toJSONArray
+    286:286:org.json.JSONArray toJSONArray(java.lang.String,boolean) -> toJSONArray
+    311:311:org.json.JSONArray toJSONArray(java.lang.String,org.json.JSONMLParserConfiguration) -> toJSONArray
+    335:335:org.json.JSONArray toJSONArray(org.json.XMLTokener,org.json.JSONMLParserConfiguration) -> toJSONArray
+    357:357:org.json.JSONArray toJSONArray(org.json.XMLTokener,boolean) -> toJSONArray
+    374:374:org.json.JSONArray toJSONArray(org.json.XMLTokener) -> toJSONArray
+    392:392:org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
+    412:412:org.json.JSONObject toJSONObject(java.lang.String,boolean) -> toJSONObject
+    434:434:org.json.JSONObject toJSONObject(java.lang.String,org.json.JSONMLParserConfiguration) -> toJSONObject
+    452:452:org.json.JSONObject toJSONObject(org.json.XMLTokener) -> toJSONObject
+    472:472:org.json.JSONObject toJSONObject(org.json.XMLTokener,boolean) -> toJSONObject
+    494:494:org.json.JSONObject toJSONObject(org.json.XMLTokener,org.json.JSONMLParserConfiguration) -> toJSONObject
+    509:572:java.lang.String toString(org.json.JSONArray) -> toString
+    586:651:java.lang.String toString(org.json.JSONObject) -> toString
+org.json.JSONMLParserConfiguration -> org.json.i:
+# {"fileName":"JSONMLParserConfiguration.java","id":"sourceFile"}
     int DEFAULT_MAXIMUM_NESTING_DEPTH -> a
     org.json.JSONMLParserConfiguration ORIGINAL -> b
     org.json.JSONMLParserConfiguration KEEP_STRINGS -> c
-    void <init>() -> <init>
-    void <init>(boolean,int) -> <init>
-    org.json.JSONMLParserConfiguration clone() -> clone
-    org.json.JSONMLParserConfiguration withKeepStrings(boolean) -> withKeepStrings
-    org.json.JSONMLParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
-    org.json.ParserConfiguration clone() -> clone
-    java.lang.Object clone() -> clone
-    void <clinit>() -> <clinit>
-org.json.JSONObject -> a.a.j:
+    28:30:void <init>() -> <init>
+    39:40:void <init>(boolean,int) -> <init>
+    52:52:org.json.JSONMLParserConfiguration clone() -> clone
+    61:61:org.json.JSONMLParserConfiguration withKeepStrings(boolean) -> withKeepStrings
+    67:67:org.json.JSONMLParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    9:9:org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    9:9:org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
+    9:9:org.json.ParserConfiguration clone() -> clone
+    9:9:java.lang.Object clone() -> clone
+    18:22:void <clinit>() -> <clinit>
+org.json.JSONObject -> org.json.j:
+# {"fileName":"JSONObject.java","id":"sourceFile"}
     java.util.regex.Pattern NUMBER_PATTERN -> a
     java.util.Map map -> c
     java.lang.Object NULL -> b
-    java.lang.Class getMapType() -> getMapType
-    void <init>() -> <init>
-    void <init>(org.json.JSONObject,java.lang.String[]) -> <init>
-    void <init>(org.json.JSONTokener) -> <init>
-    void <init>(java.util.Map) -> <init>
-    void <init>(java.util.Map,org.json.JSONParserConfiguration) -> <init>
-    void <init>(java.util.Map,int,org.json.JSONParserConfiguration) -> <init>
-    void <init>(java.lang.Object) -> <init>
-    void <init>(java.lang.Object,java.util.Set) -> <init>
-    void <init>(java.lang.Object,java.lang.String[]) -> <init>
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.lang.String,java.util.Locale) -> <init>
-    void <init>(int) -> <init>
-    org.json.JSONObject accumulate(java.lang.String,java.lang.Object) -> accumulate
-    org.json.JSONObject append(java.lang.String,java.lang.Object) -> append
-    java.lang.String doubleToString(double) -> doubleToString
-    java.lang.Object get(java.lang.String) -> get
-    java.lang.Enum getEnum(java.lang.Class,java.lang.String) -> getEnum
-    boolean getBoolean(java.lang.String) -> getBoolean
-    java.math.BigInteger getBigInteger(java.lang.String) -> getBigInteger
-    java.math.BigDecimal getBigDecimal(java.lang.String) -> getBigDecimal
-    double getDouble(java.lang.String) -> getDouble
-    float getFloat(java.lang.String) -> getFloat
-    java.lang.Number getNumber(java.lang.String) -> getNumber
-    int getInt(java.lang.String) -> getInt
-    org.json.JSONArray getJSONArray(java.lang.String) -> getJSONArray
-    org.json.JSONObject getJSONObject(java.lang.String) -> getJSONObject
-    long getLong(java.lang.String) -> getLong
-    java.lang.String[] getNames(org.json.JSONObject) -> getNames
-    java.lang.String[] getNames(java.lang.Object) -> getNames
-    java.lang.String getString(java.lang.String) -> getString
-    boolean has(java.lang.String) -> has
-    org.json.JSONObject increment(java.lang.String) -> increment
-    boolean isNull(java.lang.String) -> isNull
-    java.util.Iterator keys() -> keys
-    java.util.Set keySet() -> keySet
-    java.util.Set entrySet() -> entrySet
-    int length() -> length
-    void clear() -> clear
-    boolean isEmpty() -> isEmpty
-    org.json.JSONArray names() -> names
-    java.lang.String numberToString(java.lang.Number) -> numberToString
-    java.lang.Object opt(java.lang.String) -> opt
-    java.lang.Enum optEnum(java.lang.Class,java.lang.String) -> optEnum
-    java.lang.Enum optEnum(java.lang.Class,java.lang.String,java.lang.Enum) -> optEnum
-    boolean optBoolean(java.lang.String) -> optBoolean
-    boolean optBoolean(java.lang.String,boolean) -> optBoolean
-    java.lang.Boolean optBooleanObject(java.lang.String) -> optBooleanObject
-    java.lang.Boolean optBooleanObject(java.lang.String,java.lang.Boolean) -> optBooleanObject
-    java.math.BigDecimal optBigDecimal(java.lang.String,java.math.BigDecimal) -> optBigDecimal
-    java.math.BigDecimal objectToBigDecimal(java.lang.Object,java.math.BigDecimal) -> objectToBigDecimal
-    java.math.BigDecimal objectToBigDecimal(java.lang.Object,java.math.BigDecimal,boolean) -> objectToBigDecimal
-    java.math.BigInteger optBigInteger(java.lang.String,java.math.BigInteger) -> optBigInteger
-    java.math.BigInteger objectToBigInteger(java.lang.Object,java.math.BigInteger) -> objectToBigInteger
-    double optDouble(java.lang.String) -> optDouble
-    double optDouble(java.lang.String,double) -> optDouble
-    java.lang.Double optDoubleObject(java.lang.String) -> optDoubleObject
-    java.lang.Double optDoubleObject(java.lang.String,java.lang.Double) -> optDoubleObject
-    float optFloat(java.lang.String) -> optFloat
-    float optFloat(java.lang.String,float) -> optFloat
-    java.lang.Float optFloatObject(java.lang.String) -> optFloatObject
-    java.lang.Float optFloatObject(java.lang.String,java.lang.Float) -> optFloatObject
-    int optInt(java.lang.String) -> optInt
-    int optInt(java.lang.String,int) -> optInt
-    java.lang.Integer optIntegerObject(java.lang.String) -> optIntegerObject
-    java.lang.Integer optIntegerObject(java.lang.String,java.lang.Integer) -> optIntegerObject
-    org.json.JSONArray optJSONArray(java.lang.String) -> optJSONArray
-    org.json.JSONArray optJSONArray(java.lang.String,org.json.JSONArray) -> optJSONArray
-    org.json.JSONObject optJSONObject(java.lang.String) -> optJSONObject
-    org.json.JSONObject optJSONObject(java.lang.String,org.json.JSONObject) -> optJSONObject
-    long optLong(java.lang.String) -> optLong
-    long optLong(java.lang.String,long) -> optLong
-    java.lang.Long optLongObject(java.lang.String) -> optLongObject
-    java.lang.Long optLongObject(java.lang.String,java.lang.Long) -> optLongObject
-    java.lang.Number optNumber(java.lang.String) -> optNumber
-    java.lang.Number optNumber(java.lang.String,java.lang.Number) -> optNumber
-    java.lang.String optString(java.lang.String) -> optString
-    java.lang.String optString(java.lang.String,java.lang.String) -> optString
-    void populateMap(java.lang.Object) -> populateMap
-    void populateMap(java.lang.Object,java.util.Set) -> populateMap
-    boolean isValidMethodName(java.lang.String) -> isValidMethodName
-    java.lang.String getKeyNameFromMethod(java.lang.reflect.Method) -> getKeyNameFromMethod
-    java.lang.annotation.Annotation getAnnotation(java.lang.reflect.Method,java.lang.Class) -> getAnnotation
-    int getAnnotationDepth(java.lang.reflect.Method,java.lang.Class) -> getAnnotationDepth
-    org.json.JSONObject put(java.lang.String,boolean) -> put
-    org.json.JSONObject put(java.lang.String,java.util.Collection) -> put
-    org.json.JSONObject put(java.lang.String,double) -> put
-    org.json.JSONObject put(java.lang.String,float) -> put
-    org.json.JSONObject put(java.lang.String,int) -> put
-    org.json.JSONObject put(java.lang.String,long) -> put
-    org.json.JSONObject put(java.lang.String,java.util.Map) -> put
-    org.json.JSONObject put(java.lang.String,java.lang.Object) -> put
-    org.json.JSONObject putOnce(java.lang.String,java.lang.Object) -> putOnce
-    org.json.JSONObject putOpt(java.lang.String,java.lang.Object) -> putOpt
-    java.lang.Object query(java.lang.String) -> query
-    java.lang.Object query(org.json.JSONPointer) -> query
-    java.lang.Object optQuery(java.lang.String) -> optQuery
-    java.lang.Object optQuery(org.json.JSONPointer) -> optQuery
-    java.lang.String quote(java.lang.String) -> quote
-    java.io.Writer quote(java.lang.String,java.io.Writer) -> quote
-    java.lang.Object remove(java.lang.String) -> remove
-    boolean similar(java.lang.Object) -> similar
-    boolean isNumberSimilar(java.lang.Number,java.lang.Number) -> isNumberSimilar
-    boolean numberIsFinite(java.lang.Number) -> numberIsFinite
-    boolean isDecimalNotation(java.lang.String) -> isDecimalNotation
-    java.lang.Object stringToValue(java.lang.String) -> stringToValue
-    java.lang.Number stringToNumber(java.lang.String) -> stringToNumber
-    void testValidity(java.lang.Object) -> testValidity
-    org.json.JSONArray toJSONArray(org.json.JSONArray) -> toJSONArray
-    java.lang.String toString() -> toString
-    java.lang.String toString(int) -> toString
-    java.lang.String valueToString(java.lang.Object) -> valueToString
-    java.lang.Object wrap(java.lang.Object) -> wrap
-    java.lang.Object wrap(java.lang.Object,int,org.json.JSONParserConfiguration) -> wrap
-    java.lang.Object wrap(java.lang.Object,java.util.Set) -> wrap
-    java.lang.Object wrap(java.lang.Object,java.util.Set,int,org.json.JSONParserConfiguration) -> wrap
-    java.io.Writer write(java.io.Writer) -> write
-    java.io.Writer writeValue(java.io.Writer,java.lang.Object,int,int) -> writeValue
-    void indent(java.io.Writer,int) -> indent
-    java.io.Writer write(java.io.Writer,int,int) -> write
-    java.util.Map toMap() -> toMap
-    org.json.JSONException wrongValueFormatException(java.lang.String,java.lang.String,java.lang.Object,java.lang.Throwable) -> wrongValueFormatException
-    org.json.JSONException recursivelyDefinedObjectException(java.lang.String) -> recursivelyDefinedObjectException
-    java.lang.String removeLeadingZerosOfNumber(java.lang.String) -> removeLeadingZerosOfNumber
-    void <clinit>() -> <clinit>
-org.json.JSONObject$1 -> a.a.j$1:
-org.json.JSONObject$Null -> a.a.j$a:
-    void <init>() -> <init>
-    java.lang.Object clone() -> clone
-    boolean equals(java.lang.Object) -> equals
-    int hashCode() -> hashCode
-    java.lang.String toString() -> toString
-    void <init>(org.json.JSONObject$1) -> <init>
-org.json.JSONParserConfiguration -> a.a.k:
-    void <init>() -> <init>
-    org.json.JSONParserConfiguration clone() -> clone
-    org.json.JSONParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.ParserConfiguration clone() -> clone
-    java.lang.Object clone() -> clone
-org.json.JSONPointer -> a.a.l:
+    154:154:java.lang.Class getMapType() -> getMapType
+    168:176:void <init>() -> <init>
+    189:196:void <init>(org.json.JSONObject,java.lang.String[]) -> <init>
+    208:264:void <init>(org.json.JSONTokener) -> <init>
+    281:282:void <init>(java.util.Map) -> <init>
+    294:295:void <init>(java.util.Map,org.json.JSONParserConfiguration) -> <init>
+    301:320:void <init>(java.util.Map,int,org.json.JSONParserConfiguration) -> <init>
+    382:384:void <init>(java.lang.Object) -> <init>
+    387:389:void <init>(java.lang.Object,java.util.Set) -> <init>
+    406:415:void <init>(java.lang.Object,java.lang.String[]) -> <init>
+    430:431:void <init>(java.lang.String) -> <init>
+    444:474:void <init>(java.lang.String,java.util.Locale) -> <init>
+    483:485:void <init>(int) -> <init>
+    509:520:org.json.JSONObject accumulate(java.lang.String,java.lang.Object) -> accumulate
+    541:550:org.json.JSONObject append(java.lang.String,java.lang.Object) -> append
+    562:578:java.lang.String doubleToString(double) -> doubleToString
+    591:598:java.lang.Object get(java.lang.String) -> get
+    616:623:java.lang.Enum getEnum(java.lang.Class,java.lang.String) -> getEnum
+    637:647:boolean getBoolean(java.lang.String) -> getBoolean
+    661:666:java.math.BigInteger getBigInteger(java.lang.String) -> getBigInteger
+    683:688:java.math.BigDecimal getBigDecimal(java.lang.String) -> getBigDecimal
+    702:709:double getDouble(java.lang.String) -> getDouble
+    724:731:float getFloat(java.lang.String) -> getFloat
+    746:753:java.lang.Number getNumber(java.lang.String) -> getNumber
+    768:775:int getInt(java.lang.String) -> getInt
+    789:793:org.json.JSONArray getJSONArray(java.lang.String) -> getJSONArray
+    806:810:org.json.JSONObject getJSONObject(java.lang.String) -> getJSONObject
+    824:831:long getLong(java.lang.String) -> getLong
+    843:846:java.lang.String[] getNames(org.json.JSONObject) -> getNames
+    857:870:java.lang.String[] getNames(java.lang.Object) -> getNames
+    883:887:java.lang.String getString(java.lang.String) -> getString
+    898:898:boolean has(java.lang.String) -> has
+    917:935:org.json.JSONObject increment(java.lang.String) -> increment
+    948:948:boolean isNull(java.lang.String) -> isNull
+    960:960:java.util.Iterator keys() -> keys
+    972:972:java.util.Set keySet() -> keySet
+    988:988:java.util.Set entrySet() -> entrySet
+    997:997:int length() -> length
+    1005:1006:void clear() -> clear
+    1014:1014:boolean isEmpty() -> isEmpty
+    1025:1028:org.json.JSONArray names() -> names
+    1041:1058:java.lang.String numberToString(java.lang.Number) -> numberToString
+    1069:1069:java.lang.Object opt(java.lang.String) -> opt
+    1084:1084:java.lang.Enum optEnum(java.lang.Class,java.lang.String) -> optEnum
+    1103:1117:java.lang.Enum optEnum(java.lang.Class,java.lang.String,java.lang.Enum) -> optEnum
+    1130:1130:boolean optBoolean(java.lang.String) -> optBoolean
+    1145:1156:boolean optBoolean(java.lang.String,boolean) -> optBoolean
+    1169:1169:java.lang.Boolean optBooleanObject(java.lang.String) -> optBooleanObject
+    1184:1195:java.lang.Boolean optBooleanObject(java.lang.String,java.lang.Boolean) -> optBooleanObject
+    1214:1215:java.math.BigDecimal optBigDecimal(java.lang.String,java.math.BigDecimal) -> optBigDecimal
+    1225:1225:java.math.BigDecimal objectToBigDecimal(java.lang.Object,java.math.BigDecimal) -> objectToBigDecimal
+    1237:1266:java.math.BigDecimal objectToBigDecimal(java.lang.Object,java.math.BigDecimal,boolean) -> objectToBigDecimal
+    1282:1283:java.math.BigInteger optBigInteger(java.lang.String,java.math.BigInteger) -> optBigInteger
+    1293:1325:java.math.BigInteger objectToBigInteger(java.lang.Object,java.math.BigInteger) -> objectToBigInteger
+    1339:1339:double optDouble(java.lang.String) -> optDouble
+    1354:1358:double optDouble(java.lang.String,double) -> optDouble
+    1371:1371:java.lang.Double optDoubleObject(java.lang.String) -> optDoubleObject
+    1386:1390:java.lang.Double optDoubleObject(java.lang.String,java.lang.Double) -> optDoubleObject
+    1403:1403:float optFloat(java.lang.String) -> optFloat
+    1418:1426:float optFloat(java.lang.String,float) -> optFloat
+    1439:1439:java.lang.Float optFloatObject(java.lang.String) -> optFloatObject
+    1454:1462:java.lang.Float optFloatObject(java.lang.String,java.lang.Float) -> optFloatObject
+    1475:1475:int optInt(java.lang.String) -> optInt
+    1490:1494:int optInt(java.lang.String,int) -> optInt
+    1507:1507:java.lang.Integer optIntegerObject(java.lang.String) -> optIntegerObject
+    1522:1526:java.lang.Integer optIntegerObject(java.lang.String,java.lang.Integer) -> optIntegerObject
+    1538:1538:org.json.JSONArray optJSONArray(java.lang.String) -> optJSONArray
+    1552:1553:org.json.JSONArray optJSONArray(java.lang.String,org.json.JSONArray) -> optJSONArray
+    1564:1564:org.json.JSONObject optJSONObject(java.lang.String) -> optJSONObject
+    1577:1578:org.json.JSONObject optJSONObject(java.lang.String,org.json.JSONObject) -> optJSONObject
+    1591:1591:long optLong(java.lang.String) -> optLong
+    1606:1611:long optLong(java.lang.String,long) -> optLong
+    1624:1624:java.lang.Long optLongObject(java.lang.String) -> optLongObject
+    1639:1644:java.lang.Long optLongObject(java.lang.String,java.lang.Long) -> optLongObject
+    1658:1658:java.lang.Number optNumber(java.lang.String) -> optNumber
+    1674:1685:java.lang.Number optNumber(java.lang.String,java.lang.Number) -> optNumber
+    1699:1699:java.lang.String optString(java.lang.String) -> optString
+    1713:1714:java.lang.String optString(java.lang.String,java.lang.String) -> optString
+    1729:1730:void populateMap(java.lang.Object) -> populateMap
+    1733:1784:void populateMap(java.lang.Object,java.util.Set) -> populateMap
+    1787:1787:boolean isValidMethodName(java.lang.String) -> isValidMethodName
+    1791:1824:java.lang.String getKeyNameFromMethod(java.lang.reflect.Method) -> getKeyNameFromMethod
+    1843:1880:java.lang.annotation.Annotation getAnnotation(java.lang.reflect.Method,java.lang.Class) -> getAnnotation
+    1897:1943:int getAnnotationDepth(java.lang.reflect.Method,java.lang.Class) -> getAnnotationDepth
+    1961:1961:org.json.JSONObject put(java.lang.String,boolean) -> put
+    1979:1979:org.json.JSONObject put(java.lang.String,java.util.Collection) -> put
+    1996:1996:org.json.JSONObject put(java.lang.String,double) -> put
+    2013:2013:org.json.JSONObject put(java.lang.String,float) -> put
+    2030:2030:org.json.JSONObject put(java.lang.String,int) -> put
+    2047:2047:org.json.JSONObject put(java.lang.String,long) -> put
+    2065:2065:org.json.JSONObject put(java.lang.String,java.util.Map) -> put
+    2085:2094:org.json.JSONObject put(java.lang.String,java.lang.Object) -> put
+    2111:2117:org.json.JSONObject putOnce(java.lang.String,java.lang.Object) -> putOnce
+    2135:2138:org.json.JSONObject putOpt(java.lang.String,java.lang.Object) -> putOpt
+    2161:2161:java.lang.Object query(java.lang.String) -> query
+    2183:2183:java.lang.Object query(org.json.JSONPointer) -> query
+    2195:2195:java.lang.Object optQuery(java.lang.String) -> optQuery
+    2208:2210:java.lang.Object optQuery(org.json.JSONPointer) -> optQuery
+    2227:2232:java.lang.String quote(java.lang.String) -> quote
+    2245:2300:java.io.Writer quote(java.lang.String,java.io.Writer) -> quote
+    2312:2312:java.lang.Object remove(java.lang.String) -> remove
+    2325:2363:boolean similar(java.lang.Object) -> similar
+    2383:2404:boolean isNumberSimilar(java.lang.Number,java.lang.Number) -> isNumberSimilar
+    2408:2413:boolean numberIsFinite(java.lang.Number) -> numberIsFinite
+    2423:2424:boolean isDecimalNotation(java.lang.String) -> isDecimalNotation
+    2440:2467:java.lang.Object stringToValue(java.lang.String) -> stringToValue
+    2481:2537:java.lang.Number stringToNumber(java.lang.String) -> stringToNumber
+    2549:2552:void testValidity(java.lang.Object) -> testValidity
+    2566:2573:org.json.JSONArray toJSONArray(org.json.JSONArray) -> toJSONArray
+    2592:2594:java.lang.String toString() -> toString
+    2626:2627:java.lang.String toString(int) -> toString
+    2659:2659:java.lang.String valueToString(java.lang.Object) -> valueToString
+    2675:2675:java.lang.Object wrap(java.lang.Object) -> wrap
+    2695:2695:java.lang.Object wrap(java.lang.Object,int,org.json.JSONParserConfiguration) -> wrap
+    2699:2699:java.lang.Object wrap(java.lang.Object,java.util.Set) -> wrap
+    2704:2745:java.lang.Object wrap(java.lang.Object,java.util.Set,int,org.json.JSONParserConfiguration) -> wrap
+    2760:2760:java.io.Writer write(java.io.Writer) -> write
+    2766:2805:java.io.Writer writeValue(java.io.Writer,java.lang.Object,int,int) -> writeValue
+    2809:2812:void indent(java.io.Writer,int) -> indent
+    2845:2893:java.io.Writer write(java.io.Writer,int,int) -> write
+    2907:2921:java.util.Map toMap() -> toMap
+    2936:2949:org.json.JSONException wrongValueFormatException(java.lang.String,java.lang.String,java.lang.Object,java.lang.Throwable) -> wrongValueFormatException
+    2959:2960:org.json.JSONException recursivelyDefinedObjectException(java.lang.String) -> recursivelyDefinedObjectException
+    2970:2981:java.lang.String removeLeadingZerosOfNumber(java.lang.String) -> removeLeadingZerosOfNumber
+    141:163:void <clinit>() -> <clinit>
+org.json.JSONObject$1 -> org.json.j$1:
+# {"fileName":"JSONObject.java","id":"sourceFile"}
+org.json.JSONObject$Null -> org.json.j$a:
+# {"fileName":"JSONObject.java","id":"sourceFile"}
+    90:90:void <init>() -> <init>
+    100:100:java.lang.Object clone() -> clone
+    114:114:boolean equals(java.lang.Object) -> equals
+    123:123:int hashCode() -> hashCode
+    133:133:java.lang.String toString() -> toString
+    90:90:void <init>(org.json.JSONObject$1) -> <init>
+org.json.JSONParserConfiguration -> org.json.k:
+# {"fileName":"JSONParserConfiguration.java","id":"sourceFile"}
+    12:13:void <init>() -> <init>
+    17:17:org.json.JSONParserConfiguration clone() -> clone
+    23:23:org.json.JSONParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    6:6:org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    6:6:org.json.ParserConfiguration clone() -> clone
+    6:6:java.lang.Object clone() -> clone
+org.json.JSONPointer -> org.json.l:
+# {"fileName":"JSONPointer.java","id":"sourceFile"}
     java.lang.String ENCODING -> a
     java.util.List refTokens -> b
-    org.json.JSONPointer$Builder builder() -> builder
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.util.List) -> <init>
-    java.lang.String unescape(java.lang.String) -> unescape
-    java.lang.Object queryFrom(java.lang.Object) -> queryFrom
-    java.lang.Object readByIndexToken(java.lang.Object,java.lang.String) -> readByIndexToken
-    java.lang.String toString() -> toString
-    java.lang.String escape(java.lang.String) -> escape
-    java.lang.String toURIFragment() -> toURIFragment
-org.json.JSONPointer$Builder -> a.a.l$a:
+    112:112:org.json.JSONPointer$Builder builder() -> builder
+    126:170:void <init>(java.lang.String) -> <init>
+    178:180:void <init>(java.util.List) -> <init>
+    186:186:java.lang.String unescape(java.lang.String) -> unescape
+    200:215:java.lang.Object queryFrom(java.lang.Object) -> queryFrom
+    227:239:java.lang.Object readByIndexToken(java.lang.Object,java.lang.String) -> readByIndexToken
+    249:253:java.lang.String toString() -> toString
+    266:267:java.lang.String escape(java.lang.String) -> escape
+    277:283:java.lang.String toURIFragment() -> toURIFragment
+org.json.JSONPointer$Builder -> org.json.l$a:
+# {"fileName":"JSONPointer.java","id":"sourceFile"}
     java.util.List refTokens -> a
-    void <init>() -> <init>
-    org.json.JSONPointer build() -> build
-    org.json.JSONPointer$Builder append(java.lang.String) -> append
-    org.json.JSONPointer$Builder append(int) -> append
-org.json.JSONPointerException -> a.a.m:
+    48:52:void <init>() -> <init>
+    60:60:org.json.JSONPointer build() -> build
+    76:80:org.json.JSONPointer$Builder append(java.lang.String) -> append
+    91:92:org.json.JSONPointer$Builder append(int) -> append
+org.json.JSONPointerException -> org.json.m:
+# {"fileName":"JSONPointerException.java","id":"sourceFile"}
     long serialVersionUID -> a
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.lang.String,java.lang.Throwable) -> <init>
-org.json.JSONPropertyIgnore -> a.a.n:
-org.json.JSONPropertyName -> a.a.o:
+    23:24:void <init>(java.lang.String) -> <init>
+    33:34:void <init>(java.lang.String,java.lang.Throwable) -> <init>
+org.json.JSONPropertyIgnore -> org.json.n:
+# {"fileName":"JSONPropertyIgnore.java","id":"sourceFile"}
+org.json.JSONPropertyName -> org.json.o:
+# {"fileName":"JSONPropertyName.java","id":"sourceFile"}
     java.lang.String value() -> value
-org.json.JSONString -> a.a.p:
+org.json.JSONString -> org.json.p:
+# {"fileName":"JSONString.java","id":"sourceFile"}
     java.lang.String toJSONString() -> toJSONString
-org.json.JSONStringer -> a.a.q:
-    void <init>() -> <init>
-    java.lang.String toString() -> toString
-org.json.JSONTokener -> a.a.r:
+org.json.JSONStringer -> org.json.q:
+# {"fileName":"JSONStringer.java","id":"sourceFile"}
+    44:45:void <init>() -> <init>
+    57:57:java.lang.String toString() -> toString
+org.json.JSONTokener -> org.json.r:
+# {"fileName":"JSONTokener.java","id":"sourceFile"}
     long character -> a
     boolean eof -> b
     long index -> c
@@ -363,70 +385,74 @@ org.json.JSONTokener -> a.a.r:
     java.io.Reader reader -> f
     boolean usePrevious -> g
     long characterPreviousLine -> h
-    void <init>(java.io.Reader) -> <init>
-    void <init>(java.io.InputStream) -> <init>
-    void <init>(java.lang.String) -> <init>
-    void back() -> back
-    void decrementIndexes() -> decrementIndexes
-    int dehexchar(char) -> dehexchar
-    boolean end() -> end
-    boolean more() -> more
-    char next() -> next
-    char getPrevious() -> getPrevious
-    void incrementIndexes(int) -> incrementIndexes
-    char next(char) -> next
-    java.lang.String next(int) -> next
-    char nextClean() -> nextClean
-    java.lang.String nextString(char) -> nextString
-    java.lang.String nextTo(char) -> nextTo
-    java.lang.String nextTo(java.lang.String) -> nextTo
-    java.lang.Object nextValue() -> nextValue
-    java.lang.Object nextSimpleValue(char) -> nextSimpleValue
-    char skipTo(char) -> skipTo
-    org.json.JSONException syntaxError(java.lang.String) -> syntaxError
-    org.json.JSONException syntaxError(java.lang.String,java.lang.Throwable) -> syntaxError
-    java.lang.String toString() -> toString
-    void close() -> close
-org.json.JSONWriter -> a.a.s:
+    41:52:void <init>(java.io.Reader) -> <init>
+    60:61:void <init>(java.io.InputStream) -> <init>
+    70:71:void <init>(java.lang.String) -> <init>
+    82:88:void back() -> back
+    94:101:void decrementIndexes() -> decrementIndexes
+    110:119:int dehexchar(char) -> dehexchar
+    128:128:boolean end() -> end
+    140:158:boolean more() -> more
+    170:186:char next() -> next
+    193:193:char getPrevious() -> getPrevious
+    201:217:void incrementIndexes(int) -> incrementIndexes
+    227:235:char next(char) -> next
+    249:263:java.lang.String next(int) -> next
+    274:278:char nextClean() -> nextClean
+    295:342:java.lang.String nextString(char) -> nextString
+    357:367:java.lang.String nextTo(char) -> nextTo
+    381:391:java.lang.String nextTo(java.lang.String) -> nextTo
+    404:421:java.lang.Object nextValue() -> nextValue
+    427:455:java.lang.Object nextSimpleValue(char) -> nextSimpleValue
+    471:493:char skipTo(char) -> skipTo
+    503:503:org.json.JSONException syntaxError(java.lang.String) -> syntaxError
+    514:514:org.json.JSONException syntaxError(java.lang.String,java.lang.Throwable) -> syntaxError
+    524:524:java.lang.String toString() -> toString
+    534:537:void close() -> close
+org.json.JSONWriter -> org.json.s:
+# {"fileName":"JSONWriter.java","id":"sourceFile"}
     int maxdepth -> c
     boolean comma -> d
     char mode -> a
     org.json.JSONObject[] stack -> e
     int top -> f
     java.lang.Appendable writer -> b
-    void <init>(java.lang.Appendable) -> <init>
-    org.json.JSONWriter append(java.lang.String) -> append
-    org.json.JSONWriter array() -> array
-    org.json.JSONWriter end(char,char) -> end
-    org.json.JSONWriter endArray() -> endArray
-    org.json.JSONWriter endObject() -> endObject
-    org.json.JSONWriter key(java.lang.String) -> key
-    org.json.JSONWriter object() -> object
-    void pop(char) -> pop
-    void push(org.json.JSONObject) -> push
-    java.lang.String valueToString(java.lang.Object) -> valueToString
-    org.json.JSONWriter value(boolean) -> value
-    org.json.JSONWriter value(double) -> value
-    org.json.JSONWriter value(long) -> value
-    org.json.JSONWriter value(java.lang.Object) -> value
-org.json.ParserConfiguration -> a.a.t:
+    78:84:void <init>(java.lang.Appendable) -> <init>
+    93:114:org.json.JSONWriter append(java.lang.String) -> append
+    127:133:org.json.JSONWriter array() -> array
+    144:159:org.json.JSONWriter end(char,char) -> end
+    169:169:org.json.JSONWriter endArray() -> endArray
+    179:179:org.json.JSONWriter endObject() -> endObject
+    191:217:org.json.JSONWriter key(java.lang.String) -> key
+    231:240:org.json.JSONWriter object() -> object
+    251:264:void pop(char) -> pop
+    272:278:void push(org.json.JSONObject) -> push
+    305:349:java.lang.String valueToString(java.lang.Object) -> valueToString
+    360:360:org.json.JSONWriter value(boolean) -> value
+    370:370:org.json.JSONWriter value(double) -> value
+    380:380:org.json.JSONWriter value(long) -> value
+    392:392:org.json.JSONWriter value(java.lang.Object) -> value
+org.json.ParserConfiguration -> org.json.t:
+# {"fileName":"ParserConfiguration.java","id":"sourceFile"}
     int UNDEFINED_MAXIMUM_NESTING_DEPTH -> d
     int DEFAULT_MAXIMUM_NESTING_DEPTH -> e
     boolean keepStrings -> f
     int maxNestingDepth -> g
-    void <init>() -> <init>
-    void <init>(boolean,int) -> <init>
-    org.json.ParserConfiguration clone() -> clone
-    boolean isKeepStrings() -> isKeepStrings
-    org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
-    int getMaxNestingDepth() -> getMaxNestingDepth
-    org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    java.lang.Object clone() -> clone
-org.json.Property -> a.a.u:
-    void <init>() -> <init>
-    org.json.JSONObject toJSONObject(java.util.Properties) -> toJSONObject
-    java.util.Properties toProperties(org.json.JSONObject) -> toProperties
-org.json.XML -> a.a.v:
+    35:38:void <init>() -> <init>
+    46:49:void <init>(boolean,int) -> <init>
+    61:61:org.json.ParserConfiguration clone() -> clone
+    74:74:boolean isKeepStrings() -> isKeepStrings
+    89:91:org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
+    100:100:int getMaxNestingDepth() -> getMaxNestingDepth
+    116:124:org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    9:9:java.lang.Object clone() -> clone
+org.json.Property -> org.json.u:
+# {"fileName":"Property.java","id":"sourceFile"}
+    20:21:void <init>() -> <init>
+    32:40:org.json.JSONObject toJSONObject(java.util.Properties) -> toJSONObject
+    50:60:java.util.Properties toProperties(org.json.JSONObject) -> toProperties
+org.json.XML -> org.json.v:
+# {"fileName":"XML.java","id":"sourceFile"}
     java.lang.Character AMP -> a
     java.lang.Character APOS -> b
     java.lang.Character BANG -> c
@@ -438,48 +464,51 @@ org.json.XML -> a.a.v:
     java.lang.Character SLASH -> i
     java.lang.String NULL_ATTR -> j
     java.lang.String TYPE_ATTR -> k
-    void <init>() -> <init>
-    java.lang.Iterable codePointIterator(java.lang.String) -> codePointIterator
-    java.lang.String escape(java.lang.String) -> escape
-    boolean mustEscape(int) -> mustEscape
-    java.lang.String unescape(java.lang.String) -> unescape
-    void noSpace(java.lang.String) -> noSpace
-    boolean parse(org.json.XMLTokener,org.json.JSONObject,java.lang.String,org.json.XMLParserConfiguration,int) -> parse
-    void removeEmpty(org.json.JSONObject,org.json.XMLParserConfiguration) -> removeEmpty
-    boolean isStringAllWhiteSpace(java.lang.String) -> isStringAllWhiteSpace
-    java.lang.Number stringToNumber(java.lang.String) -> stringToNumber
-    boolean isDecimalNotation(java.lang.String) -> isDecimalNotation
-    java.lang.Object stringToValue(java.lang.String,org.json.XMLXsiTypeConverter) -> stringToValue
-    java.lang.Object stringToValue(java.lang.String) -> stringToValue
-    org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.io.Reader) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.io.Reader,boolean) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.io.Reader,org.json.XMLParserConfiguration) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.lang.String,boolean) -> toJSONObject
-    org.json.JSONObject toJSONObject(java.lang.String,org.json.XMLParserConfiguration) -> toJSONObject
-    java.lang.String toString(java.lang.Object) -> toString
-    java.lang.String toString(java.lang.Object,java.lang.String) -> toString
-    java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration) -> toString
-    java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration,int,int) -> toString
-    java.lang.String toString(java.lang.Object,int) -> toString
-    java.lang.String toString(java.lang.Object,java.lang.String,int) -> toString
-    java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration,int) -> toString
-    java.lang.String indent(int) -> indent
-    void <clinit>() -> <clinit>
-org.json.XML$1 -> a.a.v$1:
+    26:27:void <init>() -> <init>
+    78:78:java.lang.Iterable codePointIterator(java.lang.String) -> codePointIterator
+    122:150:java.lang.String escape(java.lang.String) -> escape
+    166:166:boolean mustEscape(int) -> mustEscape
+    187:207:java.lang.String unescape(java.lang.String) -> unescape
+    219:229:void noSpace(java.lang.String) -> noSpace
+    251:451:boolean parse(org.json.XMLTokener,org.json.JSONObject,java.lang.String,org.json.XMLParserConfiguration,int) -> parse
+    463:486:void removeEmpty(org.json.JSONObject,org.json.XMLParserConfiguration) -> removeEmpty
+    489:495:boolean isStringAllWhiteSpace(java.lang.String) -> isStringAllWhiteSpace
+    502:558:java.lang.Number stringToNumber(java.lang.String) -> stringToNumber
+    565:566:boolean isDecimalNotation(java.lang.String) -> isDecimalNotation
+    576:579:java.lang.Object stringToValue(java.lang.String,org.json.XMLXsiTypeConverter) -> stringToValue
+    592:619:java.lang.Object stringToValue(java.lang.String) -> stringToValue
+    640:640:org.json.JSONObject toJSONObject(java.lang.String) -> toJSONObject
+    660:660:org.json.JSONObject toJSONObject(java.io.Reader) -> toJSONObject
+    685:688:org.json.JSONObject toJSONObject(java.io.Reader,boolean) -> toJSONObject
+    712:720:org.json.JSONObject toJSONObject(java.io.Reader,org.json.XMLParserConfiguration) -> toJSONObject
+    746:746:org.json.JSONObject toJSONObject(java.lang.String,boolean) -> toJSONObject
+    771:771:org.json.JSONObject toJSONObject(java.lang.String,org.json.XMLParserConfiguration) -> toJSONObject
+    783:783:java.lang.String toString(java.lang.Object) -> toString
+    797:797:java.lang.String toString(java.lang.Object,java.lang.String) -> toString
+    814:814:java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration) -> toString
+    836:972:java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration,int,int) -> toString
+    988:988:java.lang.String toString(java.lang.Object,int) -> toString
+    1004:1004:java.lang.String toString(java.lang.Object,java.lang.String,int) -> toString
+    1023:1023:java.lang.String toString(java.lang.Object,java.lang.String,org.json.XMLParserConfiguration,int) -> toString
+    1034:1038:java.lang.String indent(int) -> indent
+    30:54:void <clinit>() -> <clinit>
+org.json.XML$1 -> org.json.v$1:
+# {"fileName":"XML.java","id":"sourceFile"}
     java.lang.String val$string -> a
-    void <init>(java.lang.String) -> <init>
-    java.util.Iterator iterator() -> iterator
-org.json.XML$1$1 -> a.a.v$1$1:
+    78:78:void <init>(java.lang.String) -> <init>
+    81:81:java.util.Iterator iterator() -> iterator
+org.json.XML$1$1 -> org.json.v$1$1:
+# {"fileName":"XML.java","id":"sourceFile"}
     int nextIndex -> b
     int length -> c
     org.json.XML$1 this$0 -> a
-    void <init>(org.json.XML$1) -> <init>
-    boolean hasNext() -> hasNext
-    java.lang.Integer next() -> next
-    void remove() -> remove
-    java.lang.Object next() -> next
-org.json.XMLParserConfiguration -> a.a.w:
+    81:83:void <init>(org.json.XML$1) -> <init>
+    87:87:boolean hasNext() -> hasNext
+    92:94:java.lang.Integer next() -> next
+    99:99:void remove() -> remove
+    81:81:java.lang.Object next() -> next
+org.json.XMLParserConfiguration -> org.json.w:
+# {"fileName":"XMLParserConfiguration.java","id":"sourceFile"}
     org.json.XMLParserConfiguration ORIGINAL -> a
     org.json.XMLParserConfiguration KEEP_STRINGS -> b
     java.lang.String cDataTagName -> c
@@ -488,45 +517,47 @@ org.json.XMLParserConfiguration -> a.a.w:
     java.util.Map xsiTypeMap -> j
     java.util.Set forceList -> k
     boolean shouldTrimWhiteSpace -> l
-    void <init>() -> <init>
-    void <init>(boolean) -> <init>
-    void <init>(java.lang.String) -> <init>
-    void <init>(boolean,java.lang.String) -> <init>
-    void <init>(boolean,java.lang.String,boolean) -> <init>
-    void <init>(boolean,java.lang.String,boolean,java.util.Map,java.util.Set,int,boolean) -> <init>
-    org.json.XMLParserConfiguration clone() -> clone
-    org.json.XMLParserConfiguration withKeepStrings(boolean) -> withKeepStrings
-    java.lang.String getcDataTagName() -> getcDataTagName
-    org.json.XMLParserConfiguration withcDataTagName(java.lang.String) -> withcDataTagName
-    boolean isConvertNilAttributeToNull() -> isConvertNilAttributeToNull
-    org.json.XMLParserConfiguration withConvertNilAttributeToNull(boolean) -> withConvertNilAttributeToNull
-    java.util.Map getXsiTypeMap() -> getXsiTypeMap
-    org.json.XMLParserConfiguration withXsiTypeMap(java.util.Map) -> withXsiTypeMap
-    java.util.Set getForceList() -> getForceList
-    org.json.XMLParserConfiguration withForceList(java.util.Set) -> withForceList
-    org.json.XMLParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.XMLParserConfiguration withCloseEmptyTag(boolean) -> withCloseEmptyTag
-    org.json.XMLParserConfiguration withShouldTrimWhitespace(boolean) -> withShouldTrimWhitespace
-    boolean isCloseEmptyTag() -> isCloseEmptyTag
-    boolean shouldTrimWhiteSpace() -> shouldTrimWhiteSpace
-    org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
-    org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
-    org.json.ParserConfiguration clone() -> clone
-    java.lang.Object clone() -> clone
-    void <clinit>() -> <clinit>
-org.json.XMLTokener -> a.a.x:
+    78:84:void <init>() -> <init>
+    96:97:void <init>(boolean) -> <init>
+    111:112:void <init>(java.lang.String) -> <init>
+    126:129:void <init>(boolean,java.lang.String) -> <init>
+    145:148:void <init>(boolean,java.lang.String,boolean) -> <init>
+    167:173:void <init>(boolean,java.lang.String,boolean,java.util.Map,java.util.Set,int,boolean) -> <init>
+    185:195:org.json.XMLParserConfiguration clone() -> clone
+    210:210:org.json.XMLParserConfiguration withKeepStrings(boolean) -> withKeepStrings
+    221:221:java.lang.String getcDataTagName() -> getcDataTagName
+    235:237:org.json.XMLParserConfiguration withcDataTagName(java.lang.String) -> withcDataTagName
+    248:248:boolean isConvertNilAttributeToNull() -> isConvertNilAttributeToNull
+    262:264:org.json.XMLParserConfiguration withConvertNilAttributeToNull(boolean) -> withConvertNilAttributeToNull
+    275:275:java.util.Map getXsiTypeMap() -> getXsiTypeMap
+    288:291:org.json.XMLParserConfiguration withXsiTypeMap(java.util.Map) -> withXsiTypeMap
+    300:300:java.util.Set getForceList() -> getForceList
+    310:313:org.json.XMLParserConfiguration withForceList(java.util.Set) -> withForceList
+    328:328:org.json.XMLParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    337:339:org.json.XMLParserConfiguration withCloseEmptyTag(boolean) -> withCloseEmptyTag
+    350:352:org.json.XMLParserConfiguration withShouldTrimWhitespace(boolean) -> withShouldTrimWhitespace
+    361:361:boolean isCloseEmptyTag() -> isCloseEmptyTag
+    370:370:boolean shouldTrimWhiteSpace() -> shouldTrimWhiteSpace
+    17:17:org.json.ParserConfiguration withMaxNestingDepth(int) -> withMaxNestingDepth
+    17:17:org.json.ParserConfiguration withKeepStrings(boolean) -> withKeepStrings
+    17:17:org.json.ParserConfiguration clone() -> clone
+    17:17:java.lang.Object clone() -> clone
+    26:30:void <clinit>() -> <clinit>
+org.json.XMLTokener -> org.json.x:
+# {"fileName":"XMLTokener.java","id":"sourceFile"}
     java.util.HashMap entity -> a
     org.json.XMLParserConfiguration configuration -> b
-    void <init>(java.io.Reader) -> <init>
-    void <init>(java.lang.String) -> <init>
-    void <init>(java.io.Reader,org.json.XMLParserConfiguration) -> <init>
-    java.lang.String nextCDATA() -> nextCDATA
-    java.lang.Object nextContent() -> nextContent
-    java.lang.Object nextEntity(char) -> nextEntity
-    java.lang.String unescapeEntity(java.lang.String) -> unescapeEntity
-    java.lang.Object nextMeta() -> nextMeta
-    java.lang.Object nextToken() -> nextToken
-    void skipPast(java.lang.String) -> skipPast
-    void <clinit>() -> <clinit>
-org.json.XMLXsiTypeConverter -> a.a.y:
+    23:40:void <init>(java.io.Reader) -> <init>
+    23:48:void <init>(java.lang.String) -> <init>
+    23:58:void <init>(java.io.Reader,org.json.XMLParserConfiguration) -> <init>
+    68:79:java.lang.String nextCDATA() -> nextCDATA
+    97:121:java.lang.Object nextContent() -> nextContent
+    136:148:java.lang.Object nextEntity(char) -> nextEntity
+    158:178:java.lang.String unescapeEntity(java.lang.String) -> unescapeEntity
+    198:245:java.lang.Object nextMeta() -> nextMeta
+    267:331:java.lang.Object nextToken() -> nextToken
+    351:406:void skipPast(java.lang.String) -> skipPast
+    26:32:void <clinit>() -> <clinit>
+org.json.XMLXsiTypeConverter -> org.json.y:
+# {"fileName":"XMLXsiTypeConverter.java","id":"sourceFile"}
     java.lang.Object convert(java.lang.String) -> convert

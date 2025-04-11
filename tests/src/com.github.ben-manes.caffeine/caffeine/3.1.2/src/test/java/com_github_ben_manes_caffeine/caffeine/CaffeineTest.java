@@ -15,6 +15,7 @@ import com.github.benmanes.caffeine.cache.Scheduler;
 import com.google.common.testing.FakeTicker;
 import org.junit.jupiter.api.Test;
 
+import java.beans.Transient;
 import java.lang.ref.Cleaner;
 import java.util.List;
 import java.util.Map;
@@ -25,6 +26,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class CaffeineTest {
     @Test
     void testRefresh() {
+        System.out.println("com.github.benmanes.caffeine.cache.Cache -> " + Cache.class.getName() + " com.github.benmanes.caffeine.cache.Caffeine -> " + Caffeine.class.getName());
         LoadingCache<String, String> graphs = Caffeine.newBuilder().maximumSize(10_000).refreshAfterWrite(1, TimeUnit.MINUTES)
                 .build(key -> key.equals("Hello") ? "World" : "Universe");
         assertThat(graphs.get("Hello")).isEqualTo("World");

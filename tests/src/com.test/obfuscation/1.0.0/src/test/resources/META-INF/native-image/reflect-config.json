@@ -1,0 +1,8 @@
+[
+    {
+      "name": "com_test.obfuscation.ObfuscationTest",
+      "allDeclaredConstructors": true,
+      "allDeclaredMethods": true,
+      "allDeclaredFields": true
+    }
+]
